@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "5fVOJyVqga4RG6Kezi9kttX4KKPEM2WVLg0lPt0iAADRXPvJmIZLafuKhWYLk0L/C9ADgcRboyix//UtbgI4BQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Nick\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nick\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
