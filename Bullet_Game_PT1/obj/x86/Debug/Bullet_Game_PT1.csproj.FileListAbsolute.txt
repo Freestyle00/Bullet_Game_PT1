@@ -31,3 +31,5 @@ C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\obj\
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\obj\x86\Debug\Bullet_Game_PT1.csproj.CopyComplete
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\obj\x86\Debug\Bullet_Game_PT1.exe
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\obj\x86\Debug\Bullet_Game_PT1.pdb
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\entities\you\you_animation.achx
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\entities\you\you_spritesheet.png

@@ -61,7 +61,7 @@ namespace Bullet_Game_PT1
             GlobalContent.Initialize();
 
             			CameraSetup.SetupCamera(SpriteManager.Camera, graphics);
-Type startScreenType = null;
+            Type startScreenType = typeof(Bullet_Game_PT1.Screens.GameScreen);
 
             var commandLineArgs = Environment.GetCommandLineArgs();
             if (commandLineArgs.Length > 0)
