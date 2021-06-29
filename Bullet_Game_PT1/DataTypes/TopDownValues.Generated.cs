@@ -13,10 +13,10 @@ namespace Bullet_Game_PT1.DataTypes
         public bool IsUsingCustomDeceleration;
         public float CustomDecelerationValue;
         public int InheritOrOverwriteAsInt;
-        public const string Default = "Default";
+        public const string Running_from_bullets = "Running from bullets";
         public static System.Collections.Generic.List<System.String> OrderedList = new System.Collections.Generic.List<System.String>
         {
-        Default
+        Running_from_bullets
         };
         
         

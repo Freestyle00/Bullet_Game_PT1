@@ -139,7 +139,7 @@
             </PropertySave>
           </Properties>
           <SourceType>Entity</SourceType>
-          <SourceFile>Entities\You</SourceFile>
+          <SourceFile>Entities/You</SourceFile>
           <SourceClassType>Entities\You</SourceClassType>
           <InstanceName>YouInstance</InstanceName>
           <AttachToContainer>true</AttachToContainer>
@@ -163,6 +163,13 @@
           <Name>Entities/You/You_Animation.achx</Name>
           <IsSharedStatic>true</IsSharedStatic>
           <RuntimeType>FlatRedBall.Graphics.Animation.AnimationChainList</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Name>Entities/You/TopDownValuesStatic.csv</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <HasPublicProperty>true</HasPublicProperty>
+          <CreatesDictionary>true</CreatesDictionary>
           <ProjectsToExcludeFrom />
         </ReferencedFileSave>
       </ReferencedFiles>
@@ -205,14 +212,13 @@
           <Name>ImplementsICollidable</Name>
           <ValueAsBool>true</ValueAsBool>
         </PropertySave>
+        <PropertySave>
+          <Name>IsTopDown</Name>
+          <ValueAsBool>true</ValueAsBool>
+        </PropertySave>
       </Properties>
       <NamedObjects>
         <NamedObjectSave>
-          <CustomProperty>
-            <Type>float</Type>
-            <Member>TextureScale</Member>
-            <ValueAsFloat>1</ValueAsFloat>
-          </CustomProperty>
           <CustomProperty>
             <Type>FlatRedBall.Graphics.Animation.AnimationChainList</Type>
             <Member>AnimationChains</Member>
@@ -222,6 +228,11 @@
             <Type>string</Type>
             <Member>CurrentChainName</Member>
             <ValueAsString>YouMoving</ValueAsString>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>TextureScale</Member>
+            <ValueAsFloat>1</ValueAsFloat>
           </CustomProperty>
           <Properties>
             <PropertySave>
@@ -243,14 +254,14 @@
         </NamedObjectSave>
         <NamedObjectSave>
           <CustomProperty>
-            <Type>float</Type>
-            <Member>Radius</Member>
-            <ValueAsFloat>16</ValueAsFloat>
-          </CustomProperty>
-          <CustomProperty>
             <Type>Microsoft.Xna.Framework.Color</Type>
             <Member>Color</Member>
             <ValueAsString>SteelBlue</ValueAsString>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>Radius</Member>
+            <ValueAsFloat>16</ValueAsFloat>
           </CustomProperty>
           <Properties>
             <PropertySave>
@@ -309,7 +320,9 @@
       <GenerateCode>true</GenerateCode>
     </CustomClassSave>
     <CustomClassSave>
-      <CsvFilesUsingThis />
+      <CsvFilesUsingThis>
+        <string>Entities/You/TopDownValuesStatic.csv</string>
+      </CsvFilesUsingThis>
       <RequiredProperties />
       <Name>TopDownValues</Name>
       <GenerateCode>true</GenerateCode>
@@ -333,10 +346,10 @@
     <SupportLandscape>true</SupportLandscape>
     <SupportPortrait>false</SupportPortrait>
     <RunInFullScreen>false</RunInFullScreen>
-    <AllowWindowResizing>false</AllowWindowResizing>
-    <Scale>400</Scale>
+    <AllowWindowResizing>true</AllowWindowResizing>
+    <Scale>100</Scale>
     <ScaleGum>100</ScaleGum>
-    <ResizeBehavior>StretchVisibleArea</ResizeBehavior>
+    <ResizeBehavior>IncreaseVisibleArea</ResizeBehavior>
     <ResizeBehaviorGum>StretchVisibleArea</ResizeBehaviorGum>
     <DominantInternalCoordinates>Height</DominantInternalCoordinates>
     <TextureFilter>1</TextureFilter>
