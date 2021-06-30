@@ -11,6 +11,7 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using FlatRedBall.Localization;
+using Microsoft.Xna.Framework.Input;
 
 namespace Bullet_Game_PT1.Screens
 {
@@ -18,7 +19,7 @@ namespace Bullet_Game_PT1.Screens
     {
         void CustomInitialize()
         {
-
+            YouInstance.MovementInput = InputManager.Keyboard.Get2DInput(Keys.Left, Keys.Right, Keys.Up, Keys.Down).Or(InputManager.Xbox360GamePads[0].LeftStick);
 
         }
         void CustomActivity(bool firstTimeCalled)

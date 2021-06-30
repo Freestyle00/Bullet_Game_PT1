@@ -19,11 +19,13 @@ namespace Bullet_Game_PT1.Entities
         /// This method is called when the Entity is added to managers. Entities which are instantiated but not
         /// added to managers will not have this method called.
         /// </summary>
-        Input.KeyboardAndControllerInput Input = new Input.KeyboardAndControllerInput();
-
+        
+        I2DInput InputK = InputManager.Keyboard.Get2DInput(Keys.Left, Keys.Right, Keys.Up, Keys.Down);
+        I2DInput InputA = InputManager.Xbox360GamePads[0].LeftStick;
+        
         private void CustomInitialize()
         {
-            //InitializeTopDownInput(Input);
+            CustomInitializeTopDownInput();
 
         }
 
@@ -36,7 +38,7 @@ namespace Bullet_Game_PT1.Entities
         private void CustomDestroy()
         {
 
-         
+
         }
 
         void InputI()
@@ -61,8 +63,7 @@ namespace Bullet_Game_PT1.Entities
             {
                 Input.HorinzontalValue(0);
                 Input.VerticalValue(0);
-            }
-            InitializeTopDownInput(Input);*/
+            } */
         }
 
         private static void CustomLoadStaticContent(string contentManagerName)

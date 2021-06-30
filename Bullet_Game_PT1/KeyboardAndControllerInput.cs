@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Bullet_Game_PT1.Input
 {
-	class KeyboardAndControllerInput : FlatRedBall.Input.InputDeviceBase
+	/*class KeyboardAndControllerInput : FlatRedBall.Input.InputDeviceBase
 	{
-		float HorinzontalInput = 1;
+		float HorinzontalInput = 0;
 
 		float VerticalInput = 0;
 
@@ -22,7 +22,7 @@ namespace Bullet_Game_PT1.Input
 			VerticalInput = value;
 		}
 
-		/*protected override float GetHorizontalValue()
+		protected override float GetHorizontalValue()
 		{
 			return 1;
 		}
@@ -30,6 +30,6 @@ namespace Bullet_Game_PT1.Input
 		protected override float GetVerticalValue()
 		{
 			return VerticalInput;
-		}*/
-	}
+		}
+	}*/
 }
