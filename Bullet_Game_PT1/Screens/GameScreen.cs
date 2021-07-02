@@ -19,13 +19,12 @@ namespace Bullet_Game_PT1.Screens
     {
         void CustomInitialize()
         {
-            YouInstance.MovementInput = InputManager.Keyboard.Get2DInput(Keys.Left, Keys.Right, Keys.Up, Keys.Down).Or(InputManager.Xbox360GamePads[0].LeftStick);
-
+            YouInstance.MovementInput = InputManager.Keyboard.Get2DInput(Keys.Left, Keys.Right, Keys.Up, Keys.Down).Or(InputManager.Xbox360GamePads[0].LeftStick.Or(InputManager.Keyboard.Get2DInput(Keys.A, Keys.D, Keys.W, Keys.S)));
         }
         void CustomActivity(bool firstTimeCalled)
         {
-
-
+            Seconds60Timer();
+            
         }
         void CustomDestroy()
         {

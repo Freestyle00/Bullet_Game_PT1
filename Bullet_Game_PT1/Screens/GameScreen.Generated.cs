@@ -18,11 +18,16 @@ namespace Bullet_Game_PT1.Screens
         protected FlatRedBall.TileGraphics.LayeredTileMap Map;
         protected FlatRedBall.TileCollisions.TileShapeCollection SolidCollision;
         private Bullet_Game_PT1.Entities.You YouInstance;
+        private FlatRedBall.Math.PositionedObjectList<Bullet_Game_PT1.Entities.Not_You> Not_YouList;
+        private FlatRedBall.Math.Collision.PositionedObjectVsListRelationship<Bullet_Game_PT1.Entities.You, Entities.Not_You> YouInstanceVsNot_YouList;
+        public event System.Action<Bullet_Game_PT1.Entities.You, Entities.Not_You> YouInstanceVsNot_YouListCollisionOccurred;
         public GameScreen () 
         	: base ("GameScreen")
         {
             // Not instantiating for FlatRedBall.TileGraphics.LayeredTileMap Map in Screens\GameScreen (Screen) because properties on the object prevent it
             // Not instantiating for FlatRedBall.TileCollisions.TileShapeCollection SolidCollision in Screens\GameScreen (Screen) because properties on the object prevent it
+            Not_YouList = new FlatRedBall.Math.PositionedObjectList<Bullet_Game_PT1.Entities.Not_You>();
+            Not_YouList.Name = "Not_YouList";
         }
         public override void Initialize (bool addToManagers) 
         {
@@ -31,6 +36,10 @@ namespace Bullet_Game_PT1.Screens
             // Not instantiating for FlatRedBall.TileCollisions.TileShapeCollection SolidCollision in Screens\GameScreen (Screen) because properties on the object prevent it
             YouInstance = new Bullet_Game_PT1.Entities.You(ContentManagerName, false);
             YouInstance.Name = "YouInstance";
+            Not_YouList.Clear();
+                YouInstanceVsNot_YouList = FlatRedBall.Math.Collision.CollisionManager.Self.CreateRelationship(YouInstance, Not_YouList);
+    YouInstanceVsNot_YouList.Name = "YouInstanceVsNot_YouList";
+
             // normally we wait to set variables until after the object is created, but in this case if the
             // TileShapeCollection doesn't have its Visible set before creating the tiles, it can result in
             // really bad performance issues, as shapes will be made visible, then invisible. Really bad perf!
@@ -50,6 +59,8 @@ namespace Bullet_Game_PT1.Screens
         }
         public override void AddToManagers () 
         {
+            Factories.Not_YouFactory.Initialize(ContentManagerName);
+            Factories.Not_YouFactory.AddList(Not_YouList);
             YouInstance.AddToManagers(mLayer);
             FlatRedBall.TileEntities.TileEntityInstantiator.CreateEntitiesFrom(Map);
             base.AddToManagers();
@@ -62,6 +73,14 @@ namespace Bullet_Game_PT1.Screens
             {
                 
                 YouInstance.Activity();
+                for (int i = Not_YouList.Count - 1; i > -1; i--)
+                {
+                    if (i < Not_YouList.Count)
+                    {
+                        // We do the extra if-check because activity could destroy any number of entities
+                        Not_YouList[i].Activity();
+                    }
+                }
             }
             else
             {
@@ -75,12 +94,19 @@ namespace Bullet_Game_PT1.Screens
         public override void Destroy () 
         {
             base.Destroy();
+            Factories.Not_YouFactory.Destroy();
             
+            Not_YouList.MakeOneWay();
             if (YouInstance != null)
             {
                 YouInstance.Destroy();
                 YouInstance.Detach();
             }
+            for (int i = Not_YouList.Count - 1; i > -1; i--)
+            {
+                Not_YouList[i].Destroy();
+            }
+            Not_YouList.MakeTwoWay();
             FlatRedBall.Math.Collision.CollisionManager.Self.Relationships.Clear();
             CustomDestroy();
         }
@@ -88,6 +114,8 @@ namespace Bullet_Game_PT1.Screens
         {
             bool oldShapeManagerSuppressAdd = FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue;
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = true;
+            YouInstanceVsNot_YouList.CollisionOccurred += OnYouInstanceVsNot_YouListCollisionOccurred;
+            YouInstanceVsNot_YouList.CollisionOccurred += OnYouInstanceVsNot_YouListCollisionOccurredTunnel;
             if (Map!= null)
             {
             }
@@ -120,6 +148,10 @@ namespace Bullet_Game_PT1.Screens
         public virtual void RemoveFromManagers () 
         {
             YouInstance.RemoveFromManagers();
+            for (int i = Not_YouList.Count - 1; i > -1; i--)
+            {
+                Not_YouList[i].Destroy();
+            }
         }
         public virtual void AssignCustomVariables (bool callOnContainedElements) 
         {
@@ -159,6 +191,10 @@ namespace Bullet_Game_PT1.Screens
             {
             }
             YouInstance.ConvertToManuallyUpdated();
+            for (int i = 0; i < Not_YouList.Count; i++)
+            {
+                Not_YouList[i].ConvertToManuallyUpdated();
+            }
         }
         public static void LoadStaticContent (string contentManagerName) 
         {

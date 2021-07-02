@@ -20,8 +20,6 @@ namespace Bullet_Game_PT1.Entities
         /// added to managers will not have this method called.
         /// </summary>
         
-        I2DInput InputK = InputManager.Keyboard.Get2DInput(Keys.Left, Keys.Right, Keys.Up, Keys.Down);
-        I2DInput InputA = InputManager.Xbox360GamePads[0].LeftStick;
         
         private void CustomInitialize()
         {
