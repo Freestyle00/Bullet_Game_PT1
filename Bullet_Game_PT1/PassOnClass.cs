@@ -9,5 +9,7 @@ namespace Bullet_Game_PT1
 	public static class PassOnClass
 	{
 		public static float Time;
+		public static float YouX;
+		public static float YouY;
 	}
 }

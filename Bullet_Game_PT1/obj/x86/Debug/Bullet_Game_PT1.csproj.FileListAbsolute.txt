@@ -65,3 +65,11 @@ C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\FlatRedBallDesktopGL.pdb
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\GumCoreXnaPc.pdb
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\StateInterpolation.pdb
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\standardtileset.tsx
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\standardtileseticons.png
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\content\standardtileset.tsx
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\content\standardtileseticons.png
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\content\entities\not_you\not_you.png
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\content\entities\not_you\not_you_animation.achx
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\entities\not_you\not_you.png
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\entities\not_you\not_you_animation.achx

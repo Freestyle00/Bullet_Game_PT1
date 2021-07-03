@@ -20,14 +20,14 @@ namespace Bullet_Game_PT1.Entities
         /// </summary>
         private void CustomInitialize()
         {
-
-
+            
+            
         }
 
         private void CustomActivity()
         {
-
-
+            
+            
         }
 
         private void CustomDestroy()

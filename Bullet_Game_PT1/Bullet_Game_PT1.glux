@@ -246,6 +246,14 @@
       </Tags>
       <Source>GLUE</Source>
       <UseGlobalContent>false</UseGlobalContent>
+      <ReferencedFiles>
+        <ReferencedFileSave>
+          <Name>Entities/Not_You/Not_You_Animation.achx</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>FlatRedBall.Graphics.Animation.AnimationChainList</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
+      </ReferencedFiles>
       <IsHiddenInTreeView>false</IsHiddenInTreeView>
       <CustomVariables>
         <CustomVariable>
@@ -293,6 +301,16 @@
             <Member>TextureScale</Member>
             <ValueAsFloat>1</ValueAsFloat>
           </CustomProperty>
+          <CustomProperty>
+            <Type>FlatRedBall.Graphics.Animation.AnimationChainList</Type>
+            <Member>AnimationChains</Member>
+            <ValueAsString>Not_You_Animation</ValueAsString>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>string</Type>
+            <Member>CurrentChainName</Member>
+            <ValueAsString>Not_You</ValueAsString>
+          </CustomProperty>
           <Properties>
             <PropertySave>
               <Name>AssociateWithFactory</Name>
@@ -315,7 +333,12 @@
           <CustomProperty>
             <Type>float</Type>
             <Member>Radius</Member>
-            <ValueAsFloat>16</ValueAsFloat>
+            <ValueAsFloat>5</ValueAsFloat>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>Microsoft.Xna.Framework.Color</Type>
+            <Member>Color</Member>
+            <ValueAsString>White</ValueAsString>
           </CustomProperty>
           <Properties>
             <PropertySave>
@@ -523,7 +546,13 @@
   <ExternallyBuiltFileDirectory>../../</ExternallyBuiltFileDirectory>
   <FileVersion>6</FileVersion>
   <PluginData>
-    <RequiredPlugins />
+    <RequiredPlugins>
+      <PluginRequirement>
+        <Name>Tiled Plugin</Name>
+        <Version>2.16.0.0</Version>
+        <VersionRequirement>EqualToOrNewerThan</VersionRequirement>
+      </PluginRequirement>
+    </RequiredPlugins>
   </PluginData>
   <DisplaySettings>
     <Name>Custom</Name>

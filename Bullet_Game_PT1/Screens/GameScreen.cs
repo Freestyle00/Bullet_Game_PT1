@@ -24,7 +24,7 @@ namespace Bullet_Game_PT1.Screens
         void CustomActivity(bool firstTimeCalled)
         {
             Seconds60Timer();
-            
+            BulletSpawn();
         }
         void CustomDestroy()
         {

@@ -23,13 +23,14 @@ namespace Bullet_Game_PT1.Entities
         
         private void CustomInitialize()
         {
-            CustomInitializeTopDownInput();
+            //CustomInitializeTopDownInput();
 
         }
 
         private void CustomActivity()
         {
-            InputI();
+           PassOnClass.YouX = this.X; //Both of these lines are needed
+           PassOnClass.YouY = this.Y; //That his location will be shared and for the enemie to be used
 
         }
 
@@ -38,32 +39,6 @@ namespace Bullet_Game_PT1.Entities
 
 
         }
-
-        void InputI()
-        {
-            /*if (InputManager.Keyboard.KeyDown(Keys.D) || InputManager.Keyboard.KeyDown(Keys.Right))
-            {
-                Input.HorinzontalValue(1);
-            }
-            else if (InputManager.Keyboard.KeyDown(Keys.A) || InputManager.Keyboard.KeyDown(Keys.Left))
-            {
-                Input.HorinzontalValue(-1);
-            }
-            else if (InputManager.Keyboard.KeyDown(Keys.W) || InputManager.Keyboard.KeyDown(Keys.Up))
-            {
-                Input.VerticalValue(1);
-            }
-            else if (InputManager.Keyboard.KeyDown(Keys.S) || InputManager.Keyboard.KeyDown(Keys.Down))
-            {
-                Input.VerticalValue(-1);
-            }
-            else
-            {
-                Input.HorinzontalValue(0);
-                Input.VerticalValue(0);
-            } */
-        }
-
         private static void CustomLoadStaticContent(string contentManagerName)
         {
 

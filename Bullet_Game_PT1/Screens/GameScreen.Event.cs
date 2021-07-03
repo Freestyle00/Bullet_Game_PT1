@@ -14,8 +14,7 @@ namespace Bullet_Game_PT1.Screens
     {
         void OnYouInstanceVsNot_YouListCollisionOccurred (Bullet_Game_PT1.Entities.You first, Entities.Not_You second) 
         {
-            
+            Console.WriteLine("Hit"); //That is the best I will do for now
         }
-        
     }
 }

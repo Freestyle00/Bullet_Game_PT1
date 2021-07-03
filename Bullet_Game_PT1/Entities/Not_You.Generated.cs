@@ -21,6 +21,7 @@ namespace Bullet_Game_PT1.Entities
         static object mLockObject = new object();
         static System.Collections.Generic.List<string> mRegisteredUnloads = new System.Collections.Generic.List<string>();
         static System.Collections.Generic.List<string> LoadedContentManagers = new System.Collections.Generic.List<string>();
+        protected static FlatRedBall.Graphics.Animation.AnimationChainList Not_You_Animation;
         
         private FlatRedBall.Sprite SpriteInstance;
         private FlatRedBall.Math.Geometry.Circle mCircleInstance;
@@ -125,12 +126,15 @@ namespace Bullet_Game_PT1.Entities
                 SpriteInstance.AttachTo(this, false);
             }
             SpriteInstance.TextureScale = 1f;
+            SpriteInstance.AnimationChains = Not_You_Animation;
+            SpriteInstance.CurrentChainName = "Not_You";
             if (mCircleInstance.Parent == null)
             {
                 mCircleInstance.CopyAbsoluteToRelative();
                 mCircleInstance.AttachTo(this, false);
             }
-            CircleInstance.Radius = 16f;
+            CircleInstance.Radius = 5f;
+            CircleInstance.Color = Microsoft.Xna.Framework.Color.White;
             mGeneratedCollision = new FlatRedBall.Math.Geometry.ShapeCollection();
             Collision.Circles.AddOneWay(mCircleInstance);
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
@@ -158,7 +162,10 @@ namespace Bullet_Game_PT1.Entities
             {
             }
             SpriteInstance.TextureScale = 1f;
-            CircleInstance.Radius = 16f;
+            SpriteInstance.AnimationChains = Not_You_Animation;
+            SpriteInstance.CurrentChainName = "Not_You";
+            CircleInstance.Radius = 5f;
+            CircleInstance.Color = Microsoft.Xna.Framework.Color.White;
         }
         public virtual void ConvertToManuallyUpdated () 
         {
@@ -195,6 +202,11 @@ namespace Bullet_Game_PT1.Entities
                         mRegisteredUnloads.Add(ContentManagerName);
                     }
                 }
+                if (!FlatRedBall.FlatRedBallServices.IsLoaded<FlatRedBall.Graphics.Animation.AnimationChainList>(@"content/entities/not_you/not_you_animation.achx", ContentManagerName))
+                {
+                    registerUnload = true;
+                }
+                Not_You_Animation = FlatRedBall.FlatRedBallServices.Load<FlatRedBall.Graphics.Animation.AnimationChainList>(@"content/entities/not_you/not_you_animation.achx", ContentManagerName);
             }
             if (registerUnload && ContentManagerName != FlatRedBall.FlatRedBallServices.GlobalContentManager)
             {
@@ -218,19 +230,38 @@ namespace Bullet_Game_PT1.Entities
             }
             if (LoadedContentManagers.Count == 0)
             {
+                if (Not_You_Animation != null)
+                {
+                    Not_You_Animation= null;
+                }
             }
         }
         [System.Obsolete("Use GetFile instead")]
         public static object GetStaticMember (string memberName) 
         {
+            switch(memberName)
+            {
+                case  "Not_You_Animation":
+                    return Not_You_Animation;
+            }
             return null;
         }
         public static object GetFile (string memberName) 
         {
+            switch(memberName)
+            {
+                case  "Not_You_Animation":
+                    return Not_You_Animation;
+            }
             return null;
         }
         object GetMember (string memberName) 
         {
+            switch(memberName)
+            {
+                case  "Not_You_Animation":
+                    return Not_You_Animation;
+            }
             return null;
         }
         protected bool mIsPaused;

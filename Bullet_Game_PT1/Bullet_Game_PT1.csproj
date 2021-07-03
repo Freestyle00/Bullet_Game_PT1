@@ -49,6 +49,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Code Clutter for Entities\Not_YouCodeClutter.cs" />
     <Compile Include="Code Clutter for Screens\GameScreenCodeClutter.cs" />
     <Compile Include="DataTypes\TileMapInfo.Generated.cs" />
     <Compile Include="DataTypes\TopDownValues.Generated.cs" />
@@ -156,6 +157,14 @@
     <Content Include="Content\shader.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="content\entities\not_you\not_you.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>not_you</Name>
+    </None>
+    <None Include="content\entities\not_you\not_you_animation.achx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Not_You_Animation</Name>
+    </None>
     <None Include="content\entities\you\topdownvaluesstatic.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>TopDownValuesStatic</Name>
@@ -167,6 +176,14 @@
     <None Include="content\entities\you\you_spritesheet.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>you_spritesheet</Name>
+    </None>
+    <None Include="content\standardtileset.tsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>standardtileset</Name>
+    </None>
+    <None Include="content\standardtileseticons.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>standardtileseticons</Name>
     </None>
     <None Include="Libraries\DesktopGl\Debug\FlatRedBall.Forms.dll" />
     <None Include="Libraries\DesktopGl\Debug\GumCoreXnaPc.dll" />
