@@ -26,7 +26,7 @@ namespace Bullet_Game_PT1.Entities
 
         private void CustomActivity()
         {
-            
+            BulletSelfDestruct();
             
         }
 

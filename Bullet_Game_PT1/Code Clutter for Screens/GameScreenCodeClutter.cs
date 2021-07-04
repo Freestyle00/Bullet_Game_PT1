@@ -25,6 +25,7 @@ namespace Bullet_Game_PT1.Screens
 
 		float TimeL = 60;
 
+		float Frequenzy = 1;
 		void Seconds60Timer()
 		{
 			/// <summary>
@@ -49,14 +50,16 @@ namespace Bullet_Game_PT1.Screens
 			/// Also one of the plan is that when the bullet will be spawned that i will pass parameters on what the bullet will do.
 			/// Like a bullet will spawn with the "homing" parameter so the bullet will ligtly follow the player.
 			/// And other parameters will follow later and will be explained in the NotYou class where it matters more.
+			/// Ok change of plan I will do a frequenzy of which they will spawn and this frequnzy will increase towards time.
+			/// the frequnzy will also randomly pick form a list which Behavior the bullets will get.
+			/// And on which position they will spawn
 			/// </summary>
+			string[] Behaviors = new string[3] { "Dumb", "Dumb Aimed", "IR" };
+			int[] Height = new int[2] { 300, -300 };
 
-			//This one will get 
-			if (Math.Round(TimeL) == 58)
-			{
-				var Bullet = Factories.Not_YouFactory.CreateNew(0, 300);
-				Bullet.BehaviorHandler("Dumb Aimed");
-			}
+			Not_You Bullet = Factories.Not_YouFactory.CreateNew(FlatRedBallServices.Random.Between(-400, 400), FlatRedBallServices.Random.In(Height));
+			Bullet.BehaviorHandler(FlatRedBallServices.Random.In(Behaviors));
+
 		}
 	}
 }

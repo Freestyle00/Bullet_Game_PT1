@@ -21,7 +21,9 @@ namespace Bullet_Game_PT1.Entities
 {
 	public partial class Not_You
 	{
-		public string BehaviorOfMe;
+		public string BehaviorOfMe; //This one is that we can always know what behavior has that bullet this will be usefull for the IR function and also if i will add distinctive bullets because i think that bullets who look the same but have different evil functions should be distinctive
+
+		private float TimeTillSelfDestruct = 5; //
 		public void BehaviorHandler(string Behavior)
 		{
 			/// <summary>
@@ -33,31 +35,49 @@ namespace Bullet_Game_PT1.Entities
 			/// 2. DumbAimed The bullet will the shot at the player current position but it wont change its direction later
 			/// Best to use moderately at the start and then havier the longer the game goes on
 			/// 3. IR if the bullet is in proximity of the player (this will be determined by another hitbox of the player) the bullet will adjust its course to try to hit the player.
-			/// The third one will be a surprise atack used in the last 30seconds of the game
+			/// The third one will be a surprise atack
 			/// </summary>
 
 			BehaviorOfMe = Behavior;
 
-			if (Behavior == "Dumb-") //Bullet spawned on the lower side
+			if (Behavior == "Dumb") //Bullet spawned and just flying stupidly
 			{
-				this.YVelocity = PassOnClass.EnemieSpeed;
+				if (this.Y < 0)
+				{
+					this.YVelocity = PassOnClass.EnemieSpeed;
+				}
+				else
+				{
+					this.YVelocity = -PassOnClass.EnemieSpeed;
+				}
 			}
-			else if (Behavior == "Dumb+") //Bullet spawned on the upper side
-			{
-				this.YVelocity = -PassOnClass.EnemieSpeed;
-			}
-			else if (Behavior == "Dumb Aimed") //Dumb but with some more lines atached to it to aim
+			else if (Behavior == "Dumb Aimed" || Behavior == "IR") //Dumb but with some more lines atached to it to aim and also IR so that it aims at the start but with more accuracy later
 			{
 				double DifferenceToShootX = PassOnClass.YouX - this.X; //In here we do some prep work for the math that we can figure out the angle to shoot the bullet.
 				double DifferenceToShootY = PassOnClass.YouY - this.Y; //This is still prep
 				float  ShootAngle         = (float)Math.Atan2(DifferenceToShootY, DifferenceToShootX); //uh i got these from an older project on what to do (during the writing of that i had this math subject but now I'm pulling blanks) so please dont ask what does it do
-				this.Velocity = Vector3ExtensionMethods.FromAngle(ShootAngle).AtLength(PassOnClass.EnemieSpeed); //in here were inputting the angel we got thru magic and giving it the speed of 500
+				this.Velocity = Vector3ExtensionMethods.FromAngle(ShootAngle).AtLength(PassOnClass.EnemieSpeed); //in here were inputting the angle we got thru magic and giving it the speed it needs
 			}
-			else if (Behavior == "IR") //But that one is harder as this one will require more work
+		}
+		private void IR()
+		{
+			///<summary>
+			/// /vchelaru proposed that is should test the the bullet is in range of the player and then that i throws it self into the player
+			/// this is what that function will do
+			///</summary>
+		}
+		private void BulletSelfDestruct()
+		{
+			///<summary>
+			///As the bullets cannot stay on screen forever or else perfomance will look really bad trust me
+			///The bullet should destroy themselves after 10 seconds
+			///this is what this function does it checks if the 10 seconds are over and destroys the entity
+			///</summary>
+			TimeTillSelfDestruct -= TimeManager.SecondDifference;
+			if (TimeTillSelfDestruct <= 0)
 			{
-				
+				this.Destroy();
 			}
-
 		}
 	}
 }
