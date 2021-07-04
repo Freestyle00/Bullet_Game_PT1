@@ -15,6 +15,8 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 
+using Microsoft.Xna.Framework;
+
 namespace Bullet_Game_PT1.Entities
 {
 	public partial class Not_You
@@ -26,7 +28,6 @@ namespace Bullet_Game_PT1.Entities
 			/// When the entity is spawned in there will be an Behavior passed in.
 			/// This Behavior will welll be the behvaior of the enemies
 			/// These behavior will be maybe i will add more in the course of time
-			/// 
 			/// 1. Dumb the bullet will only be flying in one direction and this will be forward
 			/// Will always be uesd
 			/// 2. DumbAimed The bullet will the shot at the player current position but it wont change its direction later
@@ -39,20 +40,24 @@ namespace Bullet_Game_PT1.Entities
 
 			if (Behavior == "Dumb-") //Bullet spawned on the lower side
 			{
-				
+				this.YVelocity = PassOnClass.EnemieSpeed;
 			}
 			else if (Behavior == "Dumb+") //Bullet spawned on the upper side
 			{
-
+				this.YVelocity = -PassOnClass.EnemieSpeed;
 			}
-			else if (Behavior == "DumbAimed") //Funnily this one is easier than Dumb
+			else if (Behavior == "Dumb Aimed") //Dumb but with some more lines atached to it to aim
 			{
-				
+				double DifferenceToShootX = PassOnClass.YouX - this.X; //In here we do some prep work for the math that we can figure out the angle to shoot the bullet.
+				double DifferenceToShootY = PassOnClass.YouY - this.Y; //This is still prep
+				float  ShootAngle         = (float)Math.Atan2(DifferenceToShootY, DifferenceToShootX); //uh i got these from an older project on what to do (during the writing of that i had this math subject but now I'm pulling blanks) so please dont ask what does it do
+				this.Velocity = Vector3ExtensionMethods.FromAngle(ShootAngle).AtLength(PassOnClass.EnemieSpeed); //in here were inputting the angel we got thru magic and giving it the speed of 500
 			}
 			else if (Behavior == "IR") //But that one is harder as this one will require more work
 			{
 				
 			}
+
 		}
 	}
 }

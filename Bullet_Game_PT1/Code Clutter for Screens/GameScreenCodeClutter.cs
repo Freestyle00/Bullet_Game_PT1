@@ -37,7 +37,7 @@ namespace Bullet_Game_PT1.Screens
 			/// This time will also be displayed by the GUI.
 			/// </summary>
 			
-			TimeL = -TimeManager.SecondDifference; //this is it the line I created 6 lines of explanations
+			TimeL = TimeL - TimeManager.SecondDifference; //this is it the line I created 6 lines of explanations
 			PassOnClass.Time = TimeL;
 		}
 		void BulletSpawn()
@@ -51,10 +51,12 @@ namespace Bullet_Game_PT1.Screens
 			/// And other parameters will follow later and will be explained in the NotYou class where it matters more.
 			/// </summary>
 
-			var Bullet = Factories.Not_YouFactory.CreateNew();
-			Bullet.BehaviorHandler("Dumb");
-			
-
+			//This one will get 
+			if (Math.Round(TimeL) == 58)
+			{
+				var Bullet = Factories.Not_YouFactory.CreateNew(0, 300);
+				Bullet.BehaviorHandler("Dumb Aimed");
+			}
 		}
 	}
 }
