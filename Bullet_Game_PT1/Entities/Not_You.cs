@@ -27,7 +27,10 @@ namespace Bullet_Game_PT1.Entities
         private void CustomActivity()
         {
             BulletSelfDestruct();
-            
+			if (BehaviorOfMe == "IR") //As the code inside IR() should only apply to IR behavior we will check it in here before executting and to have IR() more cleaner
+			{
+                IR();
+			}
         }
 
         private void CustomDestroy()

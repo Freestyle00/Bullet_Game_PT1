@@ -25,8 +25,7 @@ namespace Bullet_Game_PT1.Screens
 
 		float TimeL = 60;
 
-		float Frequenzy = 1;
-		void Seconds60Timer()
+		private void Seconds60Timer()
 		{
 			/// <summary>
 			/// The game will be 60 seconds long 
@@ -41,7 +40,7 @@ namespace Bullet_Game_PT1.Screens
 			TimeL = TimeL - TimeManager.SecondDifference; //this is it the line I created 6 lines of explanations
 			PassOnClass.Time = TimeL;
 		}
-		void BulletSpawn()
+		private void BulletSpawn()
 		{
 			/// <summary>
 			/// This here will take care of spawning the bullets.
@@ -54,12 +53,37 @@ namespace Bullet_Game_PT1.Screens
 			/// the frequnzy will also randomly pick form a list which Behavior the bullets will get.
 			/// And on which position they will spawn
 			/// </summary>
-			string[] Behaviors = new string[3] { "Dumb", "Dumb Aimed", "IR" };
+			string[] Behaviors = new string[4] { "Dumb", "Dumb Aimed", "IR", "Blank" };
 			int[] Height = new int[2] { 300, -300 };
-
+			string Behavior = "";
+			///This code is for randomly choosing from the behavior list but with chances 35% for dumb 10% for dumb aimed and 5% for IR and 50% for Blank
+			int Chance = FlatRedBallServices.Random.Between(0, 100);
+			if (Chance >= 0 && Chance <= 35)
+			{
+				Behavior = Behaviors[0];
+			}
+			else if (Chance > 35 && Chance <= 45)
+			{
+				Behavior = Behaviors[1];
+			}
+			else if (Chance > 45 && Chance < 50)
+			{
+				Behavior = Behaviors[2];
+			}
+			else if (Chance >= 50)
+			{
+				Behavior = Behaviors[3];
+			}
+			///END
 			Not_You Bullet = Factories.Not_YouFactory.CreateNew(FlatRedBallServices.Random.Between(-400, 400), FlatRedBallServices.Random.In(Height));
-			Bullet.BehaviorHandler(FlatRedBallServices.Random.In(Behaviors));
-
+			Bullet.BehaviorHandler(Behavior);
+		}
+		private void SlowMo()
+		{ 
+			/// <summary>
+			/// 
+			/// 
+			/// </summary>
 		}
 	}
 }

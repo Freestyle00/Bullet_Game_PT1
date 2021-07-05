@@ -25,6 +25,7 @@ namespace Bullet_Game_PT1.Screens
         {
             Seconds60Timer();
             BulletSpawn();
+            SlowMo();
         }
         void CustomDestroy()
         {

@@ -36,6 +36,7 @@ namespace Bullet_Game_PT1.Entities
 			/// Best to use moderately at the start and then havier the longer the game goes on
 			/// 3. IR if the bullet is in proximity of the player (this will be determined by another hitbox of the player) the bullet will adjust its course to try to hit the player.
 			/// The third one will be a surprise atack
+			/// 4. Blank The bullet will spawn and will be immediately dispawned this is to limit the frequnezy of which the bullet spawns and to spice the game a bit up.
 			/// </summary>
 
 			BehaviorOfMe = Behavior;
@@ -44,11 +45,11 @@ namespace Bullet_Game_PT1.Entities
 			{
 				if (this.Y < 0)
 				{
-					this.YVelocity = PassOnClass.EnemieSpeed;
+					this.YVelocity = PassOnClass.EnemySpeed;
 				}
 				else
 				{
-					this.YVelocity = -PassOnClass.EnemieSpeed;
+					this.YVelocity = -PassOnClass.EnemySpeed;
 				}
 			}
 			else if (Behavior == "Dumb Aimed" || Behavior == "IR") //Dumb but with some more lines atached to it to aim and also IR so that it aims at the start but with more accuracy later
@@ -56,7 +57,15 @@ namespace Bullet_Game_PT1.Entities
 				double DifferenceToShootX = PassOnClass.YouX - this.X; //In here we do some prep work for the math that we can figure out the angle to shoot the bullet.
 				double DifferenceToShootY = PassOnClass.YouY - this.Y; //This is still prep
 				float  ShootAngle         = (float)Math.Atan2(DifferenceToShootY, DifferenceToShootX); //uh i got these from an older project on what to do (during the writing of that i had this math subject but now I'm pulling blanks) so please dont ask what does it do
-				this.Velocity = Vector3ExtensionMethods.FromAngle(ShootAngle).AtLength(PassOnClass.EnemieSpeed); //in here were inputting the angle we got thru magic and giving it the speed it needs
+				this.Velocity = Vector3ExtensionMethods.FromAngle(ShootAngle).AtLength(PassOnClass.EnemySpeed); //in here were inputting the angle we got thru magic and giving it the speed it needs
+			}
+			else if (Behavior == "Blank")
+			{
+				this.Destroy();
+			}
+			else if (Behavior == "")
+			{
+				throw new Exception("Behavior should not be an empty string");
 			}
 		}
 		private void IR()
