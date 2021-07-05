@@ -39,8 +39,11 @@ namespace Bullet_Game_PT1.Screens
 			/// This will help me to do timed events like bullet patterns or bullets who are shooted timed.
 			/// This time will also be displayed by the GUI.
 			/// </summary>
+			if (TimeManager.TimeFactor == .3f) //If youre in slow mo time doesnt run there is the penalty i wanted for slow mo
+			{
+				TimeL -= TimeManager.SecondDifference; //this is it the line I created 6 lines of explanations
+			}
 			
-			TimeL -= TimeManager.SecondDifference; //this is it the line I created 6 lines of explanations
 			PassOnClass.Time = TimeL;
 		}
 		private void BulletSpawn()

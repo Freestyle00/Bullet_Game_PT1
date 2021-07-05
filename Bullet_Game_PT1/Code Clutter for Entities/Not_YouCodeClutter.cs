@@ -23,7 +23,7 @@ namespace Bullet_Game_PT1.Entities
 	{
 		public string BehaviorOfMe; //This one is that we can always know what behavior has that bullet this will be usefull for the IR function and also if i will add distinctive bullets because i think that bullets who look the same but have different evil functions should be distinctive
 
-		private float TimeTillSelfDestruct = 15; //
+		private float TimeTillSelfDestruct = 10; //
 		public void BehaviorHandler(string Behavior)
 		{
 			/// <summary>
@@ -80,12 +80,13 @@ namespace Bullet_Game_PT1.Entities
 
 			float Distance = Vector3.Distance(new Vector3(this.X, this.Y, 0), new Vector3(PassOnClass.YouX, PassOnClass.YouY, 0)); //dont ask it was hard to come up with this
 			
-			if (Distance <= 50)
+			if (Math.Round(Distance) == 50)
 			{
+				this.Velocity = new Vector3(0, 0, 0);
 				double DifferenceToShootX = PassOnClass.YouX - this.X; //In here we do some prep work for the math that we can figure out the angle to shoot the bullet.
 				double DifferenceToShootY = PassOnClass.YouY - this.Y; //This is still prep
 				float ShootAngle = (float)Math.Atan2(DifferenceToShootY, DifferenceToShootX); //uh i got these from an older project on what to do (during the writing of that i had this math subject but now I'm pulling blanks) so please dont ask what does it do
-				this.Velocity = Vector3ExtensionMethods.FromAngle(ShootAngle).AtLength(450); //in here were inputting the angle we got thru magic and giving it ROCKET THRUSTED BOOST ok 450 is to surprise the player but also that it stays a bit fair
+				this.Velocity = Vector3ExtensionMethods.FromAngle(ShootAngle).AtLength(PassOnClass.EnemySpeed * 2); //in here were inputting the angle we got thru magic and giving it ROCKET THRUSTED BOOST ok 450 is to surprise the player but also that it stays a bit fair
 			}
 		}
 		private void BulletSelfDestruct()
