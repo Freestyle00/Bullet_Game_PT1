@@ -74,3 +74,7 @@ C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\entities\not_you\not_you.png
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\entities\not_you\not_you_animation.achx
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\content\screens\gamescreen\border.tmx
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\screens\gamescreen\fd04.xnb
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\screens\gamescreen\border.tmx
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\globalcontent\fd04.xnb
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\content\screens\gamescreen\fd44116bit.xnb

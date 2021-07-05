@@ -91,6 +91,10 @@ namespace Bullet_Game_PT1.Screens
 			/// <summary>
 			/// This function wil be really straightforward (I HOPE) you hold down a button and time slows down thats it (PLEASE)
 			/// </summary>
+			if (InputManager.Keyboard.KeyPushed(Keys.LeftShift))
+			{
+				FD44116Bit.Play();
+			}	
 			if (InputManager.Keyboard.KeyDown(Keys.LeftShift)) //Checks if the LEftshift key is being held down and if yes it slows time down
 			{
 				TimeManager.TimeFactor = .3f;	//interestingly when time is slowed down the spawnrate increases i should keep that in mind

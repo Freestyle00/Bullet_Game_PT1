@@ -15,6 +15,20 @@
       </Tags>
       <Source>GLUE</Source>
       <UseGlobalContent>false</UseGlobalContent>
+      <ReferencedFiles>
+        <ReferencedFileSave>
+          <Properties>
+            <PropertySave>
+              <Name>UseContentPipeline</Name>
+              <ValueAsBool>true</ValueAsBool>
+            </PropertySave>
+          </Properties>
+          <Name>Screens/GameScreen/FD44116Bit.wav</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>Microsoft.Xna.Framework.Audio.SoundEffect</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
+      </ReferencedFiles>
       <IsHiddenInTreeView>false</IsHiddenInTreeView>
       <NamedObjects>
         <NamedObjectSave>

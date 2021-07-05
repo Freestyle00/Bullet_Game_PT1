@@ -31,7 +31,7 @@ namespace Bullet_Game_PT1.Entities
         {
            PassOnClass.YouX = this.X; //Both of these lines are needed
            PassOnClass.YouY = this.Y; //That his location will be shared and for the enemie to be used
-
+           
         }
 
         private void CustomDestroy()

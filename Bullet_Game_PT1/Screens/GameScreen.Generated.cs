@@ -14,6 +14,7 @@ namespace Bullet_Game_PT1.Screens
         #if DEBUG
         static bool HasBeenLoadedWithGlobalContentManager = false;
         #endif
+        protected static Microsoft.Xna.Framework.Audio.SoundEffect FD44116Bit;
         
         protected FlatRedBall.TileGraphics.LayeredTileMap Map;
         protected FlatRedBall.TileCollisions.TileShapeCollection SolidCollision;
@@ -95,6 +96,7 @@ namespace Bullet_Game_PT1.Screens
         {
             base.Destroy();
             Factories.Not_YouFactory.Destroy();
+            FD44116Bit = null;
             
             Not_YouList.MakeOneWay();
             if (YouInstance != null)
@@ -212,6 +214,7 @@ namespace Bullet_Game_PT1.Screens
                 throw new System.Exception("This type has been loaded with a Global content manager, then loaded with a non-global.  This can lead to a lot of bugs");
             }
             #endif
+            FD44116Bit = FlatRedBall.FlatRedBallServices.Load<Microsoft.Xna.Framework.Audio.SoundEffect>(@"content/screens/gamescreen/fd44116bit", contentManagerName);
             Bullet_Game_PT1.Entities.You.LoadStaticContent(contentManagerName);
             CustomLoadStaticContent(contentManagerName);
         }
@@ -228,14 +231,29 @@ namespace Bullet_Game_PT1.Screens
         [System.Obsolete("Use GetFile instead")]
         public static object GetStaticMember (string memberName) 
         {
+            switch(memberName)
+            {
+                case  "FD44116Bit":
+                    return FD44116Bit;
+            }
             return null;
         }
         public static object GetFile (string memberName) 
         {
+            switch(memberName)
+            {
+                case  "FD44116Bit":
+                    return FD44116Bit;
+            }
             return null;
         }
         object GetMember (string memberName) 
         {
+            switch(memberName)
+            {
+                case  "FD44116Bit":
+                    return FD44116Bit;
+            }
             return null;
         }
     }
