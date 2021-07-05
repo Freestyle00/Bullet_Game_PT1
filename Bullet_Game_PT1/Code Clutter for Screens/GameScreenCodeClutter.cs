@@ -59,7 +59,7 @@ namespace Bullet_Game_PT1.Screens
 			string[] Behaviors = new string[4] { "Dumb", "Dumb Aimed", "IR", "Blank" };
 			int[] Height = new int[2] { 300, -300 };
 			TimeLeftTillSpawn -= TimeManager.SecondDifference;
-			if (TimeLeftTillSpawn < 0 || TimeManager.TimeFactor == .3f)
+			if (TimeLeftTillSpawn < 0)
 			{
 				string Behavior = "";
 				///This code is for randomly choosing from the behavior list but with chances 35% for dumb 10% for dumb aimed and 5% for IR and 50% for Blank
@@ -94,7 +94,7 @@ namespace Bullet_Game_PT1.Screens
 			if (InputManager.Keyboard.KeyPushed(Keys.LeftShift))
 			{
 				FD44116Bit.Play();
-			}	
+			}
 			if (InputManager.Keyboard.KeyDown(Keys.LeftShift)) //Checks if the LEftshift key is being held down and if yes it slows time down
 			{
 				TimeManager.TimeFactor = .3f;	//interestingly when time is slowed down the spawnrate increases i should keep that in mind
