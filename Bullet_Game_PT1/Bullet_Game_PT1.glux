@@ -297,11 +297,6 @@
       <NamedObjects>
         <NamedObjectSave>
           <CustomProperty>
-            <Type>float</Type>
-            <Member>TextureScale</Member>
-            <ValueAsFloat>1</ValueAsFloat>
-          </CustomProperty>
-          <CustomProperty>
             <Type>FlatRedBall.Graphics.Animation.AnimationChainList</Type>
             <Member>AnimationChains</Member>
             <ValueAsString>Not_You_Animation</ValueAsString>
@@ -310,6 +305,11 @@
             <Type>string</Type>
             <Member>CurrentChainName</Member>
             <ValueAsString>Not_You</ValueAsString>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>TextureScale</Member>
+            <ValueAsFloat>1</ValueAsFloat>
           </CustomProperty>
           <Properties>
             <PropertySave>
@@ -331,14 +331,14 @@
         </NamedObjectSave>
         <NamedObjectSave>
           <CustomProperty>
-            <Type>float</Type>
-            <Member>Radius</Member>
-            <ValueAsFloat>5</ValueAsFloat>
-          </CustomProperty>
-          <CustomProperty>
             <Type>Microsoft.Xna.Framework.Color</Type>
             <Member>Color</Member>
             <ValueAsString>White</ValueAsString>
+          </CustomProperty>
+          <CustomProperty>
+            <Type>float</Type>
+            <Member>Radius</Member>
+            <ValueAsFloat>5</ValueAsFloat>
           </CustomProperty>
           <Properties>
             <PropertySave>

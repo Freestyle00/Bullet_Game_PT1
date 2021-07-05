@@ -25,6 +25,9 @@ namespace Bullet_Game_PT1.Screens
 
 		float TimeL = 60;
 
+		float SpawnRate = .1f;
+
+		float TimeLeftTillSpawn = .2f;
 		private void Seconds60Timer()
 		{
 			/// <summary>
@@ -37,7 +40,7 @@ namespace Bullet_Game_PT1.Screens
 			/// This time will also be displayed by the GUI.
 			/// </summary>
 			
-			TimeL = TimeL - TimeManager.SecondDifference; //this is it the line I created 6 lines of explanations
+			TimeL -= TimeManager.SecondDifference; //this is it the line I created 6 lines of explanations
 			PassOnClass.Time = TimeL;
 		}
 		private void BulletSpawn()
@@ -55,35 +58,47 @@ namespace Bullet_Game_PT1.Screens
 			/// </summary>
 			string[] Behaviors = new string[4] { "Dumb", "Dumb Aimed", "IR", "Blank" };
 			int[] Height = new int[2] { 300, -300 };
-			string Behavior = "";
-			///This code is for randomly choosing from the behavior list but with chances 35% for dumb 10% for dumb aimed and 5% for IR and 50% for Blank
-			int Chance = FlatRedBallServices.Random.Between(0, 100);
-			if (Chance >= 0 && Chance <= 35)
+			TimeLeftTillSpawn -= TimeManager.SecondDifference;
+			if (TimeLeftTillSpawn < 0 || TimeManager.TimeFactor == .3f)
 			{
-				Behavior = Behaviors[0];
+				string Behavior = "";
+				///This code is for randomly choosing from the behavior list but with chances 35% for dumb 10% for dumb aimed and 5% for IR and 50% for Blank
+				int Chance = FlatRedBallServices.Random.Between(0, 100);
+				if (Chance >= 0 && Chance <= 35)
+				{
+					Behavior = Behaviors[0];
+				}
+				else if (Chance > 35 && Chance <= 45)
+				{
+					Behavior = Behaviors[1];
+				}
+				else if (Chance > 45 && Chance < 50)
+				{
+					Behavior = Behaviors[2];
+				}
+				else if (Chance >= 50)
+				{
+					Behavior = Behaviors[3];
+				}
+				///END
+				Not_You Bullet = Factories.Not_YouFactory.CreateNew(FlatRedBallServices.Random.Between(-400, 400), FlatRedBallServices.Random.In(Height));
+				Bullet.BehaviorHandler(Behavior);
+				TimeLeftTillSpawn = SpawnRate;
 			}
-			else if (Chance > 35 && Chance <= 45)
-			{
-				Behavior = Behaviors[1];
-			}
-			else if (Chance > 45 && Chance < 50)
-			{
-				Behavior = Behaviors[2];
-			}
-			else if (Chance >= 50)
-			{
-				Behavior = Behaviors[3];
-			}
-			///END
-			Not_You Bullet = Factories.Not_YouFactory.CreateNew(FlatRedBallServices.Random.Between(-400, 400), FlatRedBallServices.Random.In(Height));
-			Bullet.BehaviorHandler(Behavior);
 		}
 		private void SlowMo()
-		{ 
+		{
 			/// <summary>
-			/// 
-			/// 
+			/// This function wil be really straightforward (I HOPE) you hold down a button and time slows down thats it (PLEASE)
 			/// </summary>
+			if (InputManager.Keyboard.KeyDown(Keys.LeftShift)) //Checks if the LEftshift key is being held down and if yes it slows time down
+			{
+				TimeManager.TimeFactor = .3f;	//interestingly when time is slowed down the spawnrate increases i should keep that in mind
+			}
+			else //If it isnt then it should be defaultet back to 1
+			{
+				TimeManager.TimeFactor = 1;
+			}
 		}
 	}
 }
