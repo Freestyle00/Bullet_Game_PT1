@@ -430,6 +430,16 @@
           </Properties>
           <Name>Z</Name>
         </CustomVariable>
+        <CustomVariable>
+          <Properties>
+            <PropertySave>
+              <Name>Type</Name>
+              <ValueAsString>int</ValueAsString>
+            </PropertySave>
+          </Properties>
+          <Name>MaxHP</Name>
+          <DefaultValue xsi:type="xsd:int">20</DefaultValue>
+        </CustomVariable>
       </CustomVariables>
       <Properties>
         <PropertySave>

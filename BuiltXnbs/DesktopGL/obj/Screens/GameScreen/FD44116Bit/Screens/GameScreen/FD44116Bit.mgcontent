@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/Nick/Documents/FlatRedBallProjects/Bullet_Game_PT1/Bullet_Game_PT1/Content/Screens/GameScreen/FD44116Bit.wav</SourceFile>
-  <SourceTime>2021-07-05T16:39:44.8451715+02:00</SourceTime>
+  <SourceTime>2021-07-05T20:52:20.4239938+02:00</SourceTime>
   <DestFile>C:/Users/Nick/Documents/FlatRedBallProjects/Bullet_Game_PT1/BuiltXnbs/DesktopGL/Screens/GameScreen/FD44116Bit.xnb</DestFile>
-  <DestTime>2021-07-05T16:40:06.0427326+02:00</DestTime>
+  <DestTime>2021-07-05T20:52:42.0158547+02:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

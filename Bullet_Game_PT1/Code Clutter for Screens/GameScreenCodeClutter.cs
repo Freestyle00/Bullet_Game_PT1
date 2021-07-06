@@ -1,11 +1,13 @@
 ﻿#pragma warning disable IDE0079 //SHUT THE FUCK UP
 #pragma warning disable IDE0051 //SHUT THE FUCK UP
 #pragma warning disable IDE0052 //SHUT THE FUCK UP
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 using FlatRedBall;
 using FlatRedBall.Input;
 using FlatRedBall.Instructions;
@@ -14,7 +16,9 @@ using FlatRedBall.Graphics.Animation;
 using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using FlatRedBall.Localization;
+
 using Microsoft.Xna.Framework.Input;
+
 using Bullet_Game_PT1.Entities;
 
 
@@ -27,7 +31,7 @@ namespace Bullet_Game_PT1.Screens
 
 		float SpawnRate = .1f;
 
-		float TimeLeftTillSpawn = .2f;
+		float TimeLeftTillSpawn = .1f;
 		private void Seconds60Timer()
 		{
 			/// <summary>
@@ -39,11 +43,10 @@ namespace Bullet_Game_PT1.Screens
 			/// This will help me to do timed events like bullet patterns or bullets who are shooted timed.
 			/// This time will also be displayed by the GUI.
 			/// </summary>
-			if (TimeManager.TimeFactor == .3f) //If youre in slow mo time doesnt run there is the penalty i wanted for slow mo
+			if (TimeManager.TimeFactor != .1f) //If youre in slow mo time doesnt run there is the penalty i wanted for slow mo
 			{
 				TimeL -= TimeManager.SecondDifference; //this is it the line I created 6 lines of explanations
 			}
-			
 			PassOnClass.Time = TimeL;
 		}
 		private void BulletSpawn()
@@ -61,7 +64,12 @@ namespace Bullet_Game_PT1.Screens
 			/// </summary>
 			string[] Behaviors = new string[4] { "Dumb", "Dumb Aimed", "IR", "Blank" };
 			int[] Height = new int[2] { 300, -300 };
-			TimeLeftTillSpawn -= TimeManager.SecondDifference;
+			/// The following code will adjust the SpawnRate of the bullet according by how much the player survived and therefore making the game harder
+			float ForSomeReasonItHasToBeSeperateOrElseItWontWork = (int)Math.Round(TimeL);
+			float TimeValue = (60 - ForSomeReasonItHasToBeSeperateOrElseItWontWork) / 600; //Figure or else there will be lots of comments in here
+			SpawnRate = .1f - TimeValue;
+			/// END
+			 TimeLeftTillSpawn -= TimeManager.SecondDifference;
 			if (TimeLeftTillSpawn < 0)
 			{
 				string Behavior = "";
@@ -96,11 +104,11 @@ namespace Bullet_Game_PT1.Screens
 			/// </summary>
 			if (InputManager.Keyboard.KeyPushed(Keys.LeftShift))
 			{
-				FD44116Bit.Play();
+				FD44116Bit.Play(); //
 			}
 			if (InputManager.Keyboard.KeyDown(Keys.LeftShift)) //Checks if the LEftshift key is being held down and if yes it slows time down
 			{
-				TimeManager.TimeFactor = .3f;	//interestingly when time is slowed down the spawnrate increases i should keep that in mind
+				TimeManager.TimeFactor = .1f;	//interestingly when time is slowed down the spawnrate increases i should keep that in mind
 			}
 			else //If it isnt then it should be defaultet back to 1
 			{

@@ -80,7 +80,7 @@ namespace Bullet_Game_PT1.Entities
 
 			float Distance = Vector3.Distance(new Vector3(this.X, this.Y, 0), new Vector3(PassOnClass.YouX, PassOnClass.YouY, 0)); //dont ask it was hard to come up with this
 			
-			if (Math.Round(Distance) == 50)
+			if (Math.Round(Distance) <= 50)
 			{
 				this.Velocity = new Vector3(0, 0, 0);
 				double DifferenceToShootX = PassOnClass.YouX - this.X; //In here we do some prep work for the math that we can figure out the angle to shoot the bullet.

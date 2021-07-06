@@ -39,6 +39,7 @@ namespace Bullet_Game_PT1.Entities
                 mCircleInstance = value;
             }
         }
+        public int MaxHP = 20;
         public int Index { get; set; }
         public bool Used { get; set; }
         private FlatRedBall.Math.Geometry.ShapeCollection mGeneratedCollision;
@@ -178,6 +179,7 @@ namespace Bullet_Game_PT1.Entities
             SpriteInstance.CurrentChainName = "YouMoving";
             CircleInstance.Radius = 16f;
             CircleInstance.Color = Microsoft.Xna.Framework.Color.SteelBlue;
+            MaxHP = 20;
         }
         public virtual void ConvertToManuallyUpdated () 
         {
