@@ -53,15 +53,25 @@
     <Compile Include="Code Clutter for Screens\GameScreenCodeClutter.cs" />
     <Compile Include="DataTypes\TileMapInfo.Generated.cs" />
     <Compile Include="DataTypes\TopDownValues.Generated.cs" />
+    <Compile Include="Entities\LeftRightBorder.cs" />
+    <Compile Include="Entities\LeftRightBorder.Generated.cs">
+      <DependentUpon>LeftRightBorder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Not_You.cs" />
     <Compile Include="Entities\Not_You.Generated.cs">
       <DependentUpon>Not_You.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\UpperLowerBorder.cs" />
+    <Compile Include="Entities\UpperLowerBorder.Generated.cs">
+      <DependentUpon>UpperLowerBorder.cs</DependentUpon>
     </Compile>
     <Compile Include="Entities\You.cs" />
     <Compile Include="Entities\You.Generated.cs">
       <DependentUpon>You.cs</DependentUpon>
     </Compile>
+    <Compile Include="Factories\LeftRightBorderFactory.Generated.cs" />
     <Compile Include="Factories\Not_YouFactory.Generated.cs" />
+    <Compile Include="Factories\UpperLowerBorderFactory.Generated.cs" />
     <Compile Include="Factories\YouFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Game1.cs" />

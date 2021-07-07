@@ -7,7 +7,7 @@
     <Name>Not_You</Name>
     <Frame>
       <TextureName>not_you.png</TextureName>
-      <FrameLength>0.5</FrameLength>
+      <FrameLength>0.25</FrameLength>
       <LeftCoordinate>30</LeftCoordinate>
       <RightCoordinate>40</RightCoordinate>
       <TopCoordinate>44</TopCoordinate>
@@ -15,7 +15,7 @@
     </Frame>
     <Frame>
       <TextureName>not_you.png</TextureName>
-      <FrameLength>0.5</FrameLength>
+      <FrameLength>0.25</FrameLength>
       <LeftCoordinate>63</LeftCoordinate>
       <RightCoordinate>73</RightCoordinate>
       <TopCoordinate>44</TopCoordinate>
