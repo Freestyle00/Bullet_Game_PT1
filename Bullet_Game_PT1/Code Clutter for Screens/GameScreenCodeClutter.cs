@@ -115,6 +115,19 @@ namespace Bullet_Game_PT1.Screens
 				TimeManager.TimeFactor = 1;
 			}
 		}
+		private void GUIActivity()
+		{
+			GameScreenGum.Timer.Text = PassOnClass.Time.ToString("0");
+
+			GameScreenGum.Health.Text = YouInstance.CurrentHP.ToString();
+
+			//Time for some math
+			//There is a healthbar in the game and the player has 20 lifes so we need a formula to convert that to percent which is the width of the healthbar
+
+			int percentage = (100 * YouInstance.CurrentHP) / YouInstance.MaxHP;
+
+			GameScreenGum.HealthBarInstance.Foreground.Width = percentage;
+		}
 	}
 }
 #pragma warning restore IDE0051

@@ -15,6 +15,7 @@ namespace Bullet_Game_PT1.Screens
         static bool HasBeenLoadedWithGlobalContentManager = false;
         #endif
         protected static Microsoft.Xna.Framework.Audio.SoundEffect FD44116Bit;
+        protected static Bullet_Game_PT1.GumRuntimes.GameScreenGumRuntime GameScreenGum;
         
         protected FlatRedBall.TileGraphics.LayeredTileMap Map;
         protected FlatRedBall.TileCollisions.TileShapeCollection SolidCollision;
@@ -30,6 +31,7 @@ namespace Bullet_Game_PT1.Screens
         private FlatRedBall.Math.Collision.PositionedObjectVsListRelationship<Bullet_Game_PT1.Entities.You, Entities.UpperLowerBorder> YouInstanceVsUpperLowerBorderList;
         private FlatRedBall.Math.Collision.PositionedObjectVsListRelationship<Bullet_Game_PT1.Entities.You, Entities.LeftRightBorder> YouInstanceVsLeftRightBorderList;
         public event System.Action<Bullet_Game_PT1.Entities.You, Entities.Not_You> YouInstanceVsNot_YouListCollisionOccurred;
+        Bullet_Game_PT1.FormsControls.Screens.GameScreenGumForms Forms;
         public GameScreen () 
         	: base ("GameScreen")
         {
@@ -71,6 +73,7 @@ namespace Bullet_Game_PT1.Screens
     YouInstanceVsLeftRightBorderList.Name = "YouInstanceVsLeftRightBorderList";
     YouInstanceVsLeftRightBorderList.SetMoveCollision(0f, 1f);
 
+            Forms = new Bullet_Game_PT1.FormsControls.Screens.GameScreenGumForms(GameScreenGum);
             // normally we wait to set variables until after the object is created, but in this case if the
             // TileShapeCollection doesn't have its Visible set before creating the tiles, it can result in
             // really bad performance issues, as shapes will be made visible, then invisible. Really bad perf!
@@ -90,6 +93,7 @@ namespace Bullet_Game_PT1.Screens
         }
         public override void AddToManagers () 
         {
+            GameScreenGum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
             Factories.Not_YouFactory.Initialize(ContentManagerName);
             Factories.UpperLowerBorderFactory.Initialize(ContentManagerName);
             Factories.LeftRightBorderFactory.Initialize(ContentManagerName);
@@ -153,6 +157,8 @@ namespace Bullet_Game_PT1.Screens
             Factories.UpperLowerBorderFactory.Destroy();
             Factories.LeftRightBorderFactory.Destroy();
             FD44116Bit = null;
+            GameScreenGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
+            GameScreenGum = null;
             
             Not_YouList.MakeOneWay();
             UpperLowerBorderList.MakeOneWay();
@@ -253,6 +259,7 @@ namespace Bullet_Game_PT1.Screens
         }
         public virtual void RemoveFromManagers () 
         {
+            GameScreenGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
             YouInstance.RemoveFromManagers();
             for (int i = Not_YouList.Count - 1; i > -1; i--)
             {
@@ -360,6 +367,12 @@ namespace Bullet_Game_PT1.Screens
             {
                 throw new System.ArgumentException("contentManagerName cannot be empty or null");
             }
+            // Set the content manager for Gum
+            var contentManagerWrapper = new FlatRedBall.Gum.ContentManagerWrapper();
+            contentManagerWrapper.ContentManagerName = contentManagerName;
+            RenderingLibrary.Content.LoaderManager.Self.ContentLoader = contentManagerWrapper;
+            // Access the GumProject just in case it's async loaded
+            var throwaway = GlobalContent.GumProject;
             #if DEBUG
             if (contentManagerName == FlatRedBall.FlatRedBallServices.GlobalContentManager)
             {
@@ -371,6 +384,7 @@ namespace Bullet_Game_PT1.Screens
             }
             #endif
             FD44116Bit = FlatRedBall.FlatRedBallServices.Load<Microsoft.Xna.Framework.Audio.SoundEffect>(@"content/screens/gamescreen/fd44116bit", contentManagerName);
+            if(GameScreenGum == null) GameScreenGum = (Bullet_Game_PT1.GumRuntimes.GameScreenGumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("GameScreenGum"), true);
             Bullet_Game_PT1.Entities.You.LoadStaticContent(contentManagerName);
             CustomLoadStaticContent(contentManagerName);
         }
@@ -391,6 +405,8 @@ namespace Bullet_Game_PT1.Screens
             {
                 case  "FD44116Bit":
                     return FD44116Bit;
+                case  "GameScreenGum":
+                    return GameScreenGum;
             }
             return null;
         }
@@ -400,6 +416,8 @@ namespace Bullet_Game_PT1.Screens
             {
                 case  "FD44116Bit":
                     return FD44116Bit;
+                case  "GameScreenGum":
+                    return GameScreenGum;
             }
             return null;
         }
@@ -409,8 +427,14 @@ namespace Bullet_Game_PT1.Screens
             {
                 case  "FD44116Bit":
                     return FD44116Bit;
+                case  "GameScreenGum":
+                    return GameScreenGum;
             }
             return null;
+        }
+        private void RefreshLayoutInternal (object sender, EventArgs e) 
+        {
+            GameScreenGum.UpdateLayout();
         }
     }
 }
