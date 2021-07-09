@@ -124,9 +124,9 @@ namespace Bullet_Game_PT1.Screens
 			//Time for some math
 			//There is a healthbar in the game and the player has 20 lifes so we need a formula to convert that to percent which is the width of the healthbar
 
-			int percentage = (100 * YouInstance.CurrentHP) / YouInstance.MaxHP;
+			int Percentage = (100 * YouInstance.CurrentHP) / YouInstance.MaxHP;
 
-			GameScreenGum.HealthBarInstance.Foreground.Width = percentage;
+			GameScreenGum.HealthBarInstance.Foreground.Width = Percentage;
 		}
 	}
 }

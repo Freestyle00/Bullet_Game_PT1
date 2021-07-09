@@ -17,6 +17,24 @@
       <UseGlobalContent>false</UseGlobalContent>
       <ReferencedFiles>
         <ReferencedFileSave>
+          <Name>GumProject/Screens/GameOverGum.gusx</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>Bullet_Game_PT1.GumRuntimes.GameOverGumRuntime</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
+      </ReferencedFiles>
+      <IsHiddenInTreeView>false</IsHiddenInTreeView>
+      <Name>Screens\GameOver</Name>
+      <CustomClassesForExport />
+    </ScreenSave>
+    <ScreenSave>
+      <Tags>
+        <string>GLUE</string>
+      </Tags>
+      <Source>GLUE</Source>
+      <UseGlobalContent>false</UseGlobalContent>
+      <ReferencedFiles>
+        <ReferencedFileSave>
           <Properties>
             <PropertySave>
               <Name>UseContentPipeline</Name>

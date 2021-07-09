@@ -105,6 +105,27 @@
         "ElementType": "Screens",
         "EventType": 5,
         "TimestampUtc": "2021-07-08T19:56:50.4926679Z"
+      },
+      {
+        "NewName": " GameOverGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-07-09T11:21:52.3781352Z"
+      },
+      {
+        "NewName": " GameOverGum.EssageText",
+        "OldName": " GameOverGum.TextInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-07-09T11:22:56.0758239Z"
+      },
+      {
+        "NewName": " GameOverGum.MessageText",
+        "OldName": " GameOverGum.EssageText",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2021-07-09T11:23:01.26411Z"
       }
     ]
   }

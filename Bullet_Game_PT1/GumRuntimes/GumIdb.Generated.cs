@@ -37,6 +37,7 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/TreeViewToggleButton", typeof(Bullet_Game_PT1.GumRuntimes.DefaultForms.TreeViewToggleButtonRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("DefaultForms/UserControl", typeof(Bullet_Game_PT1.GumRuntimes.DefaultForms.UserControlRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("HealthBar", typeof(Bullet_Game_PT1.GumRuntimes.HealthBarRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("GameOverGum", typeof(Bullet_Game_PT1.GumRuntimes.GameOverGumRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("GameScreenGum", typeof(Bullet_Game_PT1.GumRuntimes.GameScreenGumRuntime));
                 
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.Button)] = typeof(Bullet_Game_PT1.GumRuntimes.DefaultForms.ButtonRuntime);
