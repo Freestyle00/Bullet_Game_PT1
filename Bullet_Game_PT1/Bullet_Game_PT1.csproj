@@ -75,7 +75,9 @@
     <Compile Include="Factories\YouFactory.Generated.cs" />
     <Compile Include="FileAliases.Generated.cs" />
     <Compile Include="Forms\Screens\GameOverGumForms.cs" />
-    <Compile Include="Forms\Screens\GameOverGumForms.Generated.cs" />
+    <Compile Include="Forms\Screens\GameOverGumForms.Generated.cs">
+      <DependentUpon>GameOverGumForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Screens\GameScreenGumForms.cs" />
     <Compile Include="Forms\Screens\GameScreenGumForms.Generated.cs">
       <DependentUpon>GameScreenGumForms.cs</DependentUpon>
@@ -202,7 +204,9 @@
       <DependentUpon>UserControlRuntime.cs</DependentUpon>
     </Compile>
     <Compile Include="GumRuntimes\GameOverGumRuntime.cs" />
-    <Compile Include="GumRuntimes\GameOverGumRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\GameOverGumRuntime.Generated.cs">
+      <DependentUpon>GameOverGumRuntime.cs</DependentUpon>
+    </Compile>
     <Compile Include="GumRuntimes\GameScreenGumRuntime.cs" />
     <Compile Include="GumRuntimes\GameScreenGumRuntime.Generated.cs">
       <DependentUpon>GameScreenGumRuntime.cs</DependentUpon>

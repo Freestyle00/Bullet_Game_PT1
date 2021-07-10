@@ -48,6 +48,10 @@ namespace Bullet_Game_PT1.Screens
 				TimeL -= TimeManager.SecondDifference; //this is it the line I created 6 lines of explanations
 			}
 			PassOnClass.Time = TimeL;
+			if (Math.Round(TimeL) <= 0)
+			{
+				GameOverScreen("CONGRATULATIONS YOU HAVE WON THE GAME");
+			}
 		}
 		private void BulletSpawn()
 		{
@@ -127,6 +131,11 @@ namespace Bullet_Game_PT1.Screens
 			int Percentage = (100 * YouInstance.CurrentHP) / YouInstance.MaxHP;
 
 			GameScreenGum.HealthBarInstance.Foreground.Width = Percentage;
+		}
+	    private void GameOverScreen(string Message)
+		{
+			PassOnClass.GameOverMessage = Message;
+			MoveToScreen("GameOver");
 		}
 	}
 }

@@ -27,7 +27,7 @@ namespace Bullet_Game_PT1.Screens
 
         void CustomActivity(bool firstTimeCalled)
         {
-
+            GameOverGum.MessageText.Text = PassOnClass.GameOverMessage;
 
         }
 
@@ -42,13 +42,5 @@ namespace Bullet_Game_PT1.Screens
 
 
         }
-
-        public void ScreenContent(string Message)
-        {
-            /// <summary>
-            /// TODO
-            /// </summary>
-
-		}
     }
 }
