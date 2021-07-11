@@ -43,13 +43,9 @@ namespace Bullet_Game_PT1.Entities
 
 
         }
-        public void Hit() //The reason this is in here is that i dont want to create an entire file just for one function so that will stay her
+        public void Hit() //The reason this is in here is that i dont want to create an entire file just for one function so that will stay here
         {
             CurrentHP -= 1;
-			if (CurrentHP <= 0)
-			{
-                this.Destroy();
-			}
         }
     }
 }
