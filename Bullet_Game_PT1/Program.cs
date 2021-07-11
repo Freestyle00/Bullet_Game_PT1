@@ -1,3 +1,4 @@
+
 using System;
 
 namespace Bullet_Game_PT1
@@ -13,7 +14,7 @@ namespace Bullet_Game_PT1
         [STAThread]
         static void Main()
         {
-            using (var game = new Game1())
+			using (var game = new Game1())
                 game.Run();
         }
     }

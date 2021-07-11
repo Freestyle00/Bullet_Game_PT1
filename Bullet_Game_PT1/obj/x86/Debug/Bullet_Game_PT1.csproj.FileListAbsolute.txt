@@ -173,3 +173,6 @@ C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\gumproject\standards\standardgraphics\red_topright.png
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\gumproject\standards\text.gutx
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\gumproject\uispritesheet.png
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\DiscordRPC.dll
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\DiscordRPC.pdb
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\Newtonsoft.Json.pdb

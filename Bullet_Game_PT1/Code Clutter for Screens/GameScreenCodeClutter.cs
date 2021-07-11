@@ -20,7 +20,8 @@ using FlatRedBall.Localization;
 using Microsoft.Xna.Framework.Input;
 
 using Bullet_Game_PT1.Entities;
-
+using DiscordRPC;
+using DiscordRPC.Logging;
 
 namespace Bullet_Game_PT1.Screens
 {
@@ -139,6 +140,7 @@ namespace Bullet_Game_PT1.Screens
 				GameOverScreen("YOU LOST \n \n TIME LEFT: " + Math.Round(TimeL));
 			}
 		}
+
 	    private void GameOverScreen(string Message)
 		{
 			PassOnClass.GameOverMessage = Message;
