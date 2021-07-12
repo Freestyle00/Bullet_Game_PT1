@@ -15,7 +15,7 @@ namespace Bullet_Game_PT1.Screens
         void OnYouInstanceVsNot_YouListCollisionOccurred (Bullet_Game_PT1.Entities.You first, Entities.Not_You second) 
         {
             second.Destroy();
-            //first.Hit(); //for debugging porpusese this will sometimes be commented out
+            first.Hit(); //for debugging porpusese this will sometimes be commented out
         }
     }
 }

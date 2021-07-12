@@ -176,3 +176,10 @@ C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\DiscordRPC.dll
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\DiscordRPC.pdb
 C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\Newtonsoft.Json.pdb
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\content\screens\gamescreen\scrap_brain_zone.ogg
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\content\screens\gamescreen\scrap_brain_zone.xnb
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\screens\gamescreen\music.ogg
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\content\screens\gamescreen\music.xnb
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\DiscordRPC.dll
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\DiscordRPC.pdb
+C:\Users\Nick\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\x86\Debug\Newtonsoft.Json.pdb

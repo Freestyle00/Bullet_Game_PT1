@@ -320,6 +320,16 @@
       <Name>FD44116Bit</Name>
       <Link>content\screens\gamescreen\fd44116bit.xnb</Link>
     </None>
+    <None Include="..\builtxnbs\desktopgl\screens\gamescreen\music.ogg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Music</Name>
+      <Link>content\screens\gamescreen\music.ogg</Link>
+    </None>
+    <None Include="..\builtxnbs\desktopgl\screens\gamescreen\music.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>Music</Name>
+      <Link>content\screens\gamescreen\music.xnb</Link>
+    </None>
     <None Include="content\entities\not_you\not_you.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>not_you</Name>

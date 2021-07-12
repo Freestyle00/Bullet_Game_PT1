@@ -52,6 +52,26 @@
           <RuntimeType>Bullet_Game_PT1.GumRuntimes.GameScreenGumRuntime</RuntimeType>
           <ProjectsToExcludeFrom />
         </ReferencedFileSave>
+        <ReferencedFileSave>
+          <Properties>
+            <PropertySave>
+              <Name>UseContentPipeline</Name>
+              <ValueAsBool>true</ValueAsBool>
+            </PropertySave>
+            <PropertySave>
+              <Name>Volume</Name>
+              <ValueAsInt>60</ValueAsInt>
+            </PropertySave>
+            <PropertySave>
+              <Name>ShouldLoopSong</Name>
+              <ValueAsBool>false</ValueAsBool>
+            </PropertySave>
+          </Properties>
+          <Name>Screens/GameScreen/Music.mp3</Name>
+          <IsSharedStatic>true</IsSharedStatic>
+          <RuntimeType>Microsoft.Xna.Framework.Media.Song</RuntimeType>
+          <ProjectsToExcludeFrom />
+        </ReferencedFileSave>
       </ReferencedFiles>
       <IsHiddenInTreeView>false</IsHiddenInTreeView>
       <NamedObjects>

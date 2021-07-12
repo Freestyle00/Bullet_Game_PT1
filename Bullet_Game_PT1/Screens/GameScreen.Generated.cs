@@ -16,6 +16,7 @@ namespace Bullet_Game_PT1.Screens
         #endif
         protected static Microsoft.Xna.Framework.Audio.SoundEffect FD44116Bit;
         protected static Bullet_Game_PT1.GumRuntimes.GameScreenGumRuntime GameScreenGum;
+        protected static Microsoft.Xna.Framework.Media.Song Music;
         
         protected FlatRedBall.TileGraphics.LayeredTileMap Map;
         protected FlatRedBall.TileCollisions.TileShapeCollection SolidCollision;
@@ -94,6 +95,7 @@ namespace Bullet_Game_PT1.Screens
         public override void AddToManagers () 
         {
             GameScreenGum.AddToManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged += RefreshLayoutInternal;
+            FlatRedBall.Audio.AudioManager.StopAndDisposeCurrentSongIfNameDiffers(Music.Name); FlatRedBall.Audio.AudioManager.PlaySong(Music, false, ContentManagerName == "Global");
             Factories.Not_YouFactory.Initialize(ContentManagerName);
             Factories.UpperLowerBorderFactory.Initialize(ContentManagerName);
             Factories.LeftRightBorderFactory.Initialize(ContentManagerName);
@@ -159,6 +161,12 @@ namespace Bullet_Game_PT1.Screens
             FD44116Bit = null;
             GameScreenGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
             GameScreenGum = null;
+            FlatRedBall.Audio.AudioManager.StopSong();
+            if (this.UnloadsContentManagerWhenDestroyed && ContentManagerName != "Global")
+            {
+                Music.Dispose();
+            }
+            Music = null;
             
             Not_YouList.MakeOneWay();
             UpperLowerBorderList.MakeOneWay();
@@ -250,6 +258,7 @@ namespace Bullet_Game_PT1.Screens
             {
                 LeftRightBorder2.RelativeX = -405f;
             }
+            Microsoft.Xna.Framework.Media.MediaPlayer.IsRepeating = false;
             FlatRedBall.Math.Geometry.ShapeManager.SuppressAddingOnVisibilityTrue = oldShapeManagerSuppressAdd;
         }
         public virtual void AddToManagersBottomUp () 
@@ -260,6 +269,7 @@ namespace Bullet_Game_PT1.Screens
         public virtual void RemoveFromManagers () 
         {
             GameScreenGum.RemoveFromManagers();FlatRedBall.FlatRedBallServices.GraphicsOptions.SizeOrOrientationChanged -= RefreshLayoutInternal;
+            FlatRedBall.Audio.AudioManager.StopSong();
             YouInstance.RemoveFromManagers();
             for (int i = Not_YouList.Count - 1; i > -1; i--)
             {
@@ -385,6 +395,7 @@ namespace Bullet_Game_PT1.Screens
             #endif
             FD44116Bit = FlatRedBall.FlatRedBallServices.Load<Microsoft.Xna.Framework.Audio.SoundEffect>(@"content/screens/gamescreen/fd44116bit", contentManagerName);
             if(GameScreenGum == null) GameScreenGum = (Bullet_Game_PT1.GumRuntimes.GameScreenGumRuntime)GumRuntime.ElementSaveExtensions.CreateGueForElement(Gum.Managers.ObjectFinder.Self.GetScreen("GameScreenGum"), true);
+            Music = FlatRedBall.FlatRedBallServices.Load<Microsoft.Xna.Framework.Media.Song>(@"content/screens/gamescreen/music", contentManagerName);
             Bullet_Game_PT1.Entities.You.LoadStaticContent(contentManagerName);
             CustomLoadStaticContent(contentManagerName);
         }
@@ -407,6 +418,8 @@ namespace Bullet_Game_PT1.Screens
                     return FD44116Bit;
                 case  "GameScreenGum":
                     return GameScreenGum;
+                case  "Music":
+                    return Music;
             }
             return null;
         }
@@ -418,6 +431,8 @@ namespace Bullet_Game_PT1.Screens
                     return FD44116Bit;
                 case  "GameScreenGum":
                     return GameScreenGum;
+                case  "Music":
+                    return Music;
             }
             return null;
         }
@@ -429,6 +444,8 @@ namespace Bullet_Game_PT1.Screens
                     return FD44116Bit;
                 case  "GameScreenGum":
                     return GameScreenGum;
+                case  "Music":
+                    return Music;
             }
             return null;
         }
