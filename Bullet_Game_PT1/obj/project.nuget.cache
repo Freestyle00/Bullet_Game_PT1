@@ -1,25 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "96qj9YH2mInPHBt13y14Txf3plRRXMHGwPU+pDjTkRk4QqOJC5cXCMVEnGrtQsL9wURi5wRBbVSjC2d+GLkkSg==",
+  "dgSpecHash": "WbjtxYFMHjBjXicJXtdiLBT4x8Y5iHgZ3++dwrBG6+uIipobkUZ1BM6rTRwZSpmf9HYhZ7TkjhRJ6wK2mO73OQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Nick\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Nick\\.nuget\\packages\\discordrichpresence\\1.0.175\\discordrichpresence.1.0.175.nupkg.sha512",
     "C:\\Users\\Nick\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Ein Downgrade des Pakets \"Newtonsoft.Json\" von 12.0.2 auf 12.0.1 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n Bullet_Game_PT1 -> DiscordRichPresence 1.0.175 -> Newtonsoft.Json (>= 12.0.2) \r\n Bullet_Game_PT1 -> Newtonsoft.Json (>= 12.0.1)",
-      "libraryId": "Newtonsoft.Json",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.7.1",
-        ".NETFramework,Version=v4.7.1/win",
-        ".NETFramework,Version=v4.7.1/win-x64",
-        ".NETFramework,Version=v4.7.1/win-x86"
-      ]
-    }
-  ]
+  "logs": []
 }

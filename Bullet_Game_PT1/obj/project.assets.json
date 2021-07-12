@@ -2,18 +2,6 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.1": {
-      "DiscordRichPresence/1.0.175": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.2"
-        },
-        "compile": {
-          "lib/net35/DiscordRPC.dll": {}
-        },
-        "runtime": {
-          "lib/net35/DiscordRPC.dll": {}
-        }
-      },
       "Newtonsoft.Json/12.0.1": {
         "type": "package",
         "compile": {
@@ -25,18 +13,6 @@
       }
     },
     ".NETFramework,Version=v4.7.1/win": {
-      "DiscordRichPresence/1.0.175": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.2"
-        },
-        "compile": {
-          "lib/net35/DiscordRPC.dll": {}
-        },
-        "runtime": {
-          "lib/net35/DiscordRPC.dll": {}
-        }
-      },
       "Newtonsoft.Json/12.0.1": {
         "type": "package",
         "compile": {
@@ -48,18 +24,6 @@
       }
     },
     ".NETFramework,Version=v4.7.1/win-x64": {
-      "DiscordRichPresence/1.0.175": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.2"
-        },
-        "compile": {
-          "lib/net35/DiscordRPC.dll": {}
-        },
-        "runtime": {
-          "lib/net35/DiscordRPC.dll": {}
-        }
-      },
       "Newtonsoft.Json/12.0.1": {
         "type": "package",
         "compile": {
@@ -71,18 +35,6 @@
       }
     },
     ".NETFramework,Version=v4.7.1/win-x86": {
-      "DiscordRichPresence/1.0.175": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.2"
-        },
-        "compile": {
-          "lib/net35/DiscordRPC.dll": {}
-        },
-        "runtime": {
-          "lib/net35/DiscordRPC.dll": {}
-        }
-      },
       "Newtonsoft.Json/12.0.1": {
         "type": "package",
         "compile": {
@@ -95,23 +47,6 @@
     }
   },
   "libraries": {
-    "DiscordRichPresence/1.0.175": {
-      "sha512": "qSWobPTbvHh9gOoBYT8C8eUhKtVdBI/WvW7GY9lNMEtsZIpL6nxCvYJwjsGL3dqlEAGY5k0vdq+wnuDLVBSV2w==",
-      "type": "package",
-      "path": "discordrichpresence/1.0.175",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "discordrichpresence.1.0.175.nupkg.sha512",
-        "discordrichpresence.nuspec",
-        "lib/net35/DiscordRPC.dll",
-        "lib/net35/DiscordRPC.pdb",
-        "lib/net35/DiscordRPC.xml",
-        "lib/netstandard2.0/DiscordRPC.dll",
-        "lib/netstandard2.0/DiscordRPC.pdb",
-        "lib/netstandard2.0/DiscordRPC.xml"
-      ]
-    },
     "Newtonsoft.Json/12.0.1": {
       "sha512": "pBR3wCgYWZGiaZDYP+HHYnalVnPJlpP1q55qvVb+adrDHmFMDc1NAKio61xTwftK3Pw5h7TZJPJEEVMd6ty8rg==",
       "type": "package",
@@ -154,7 +89,6 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.1": [
-      "DiscordRichPresence >= 1.0.175",
       "Newtonsoft.Json >= 12.0.1"
     ]
   },
@@ -196,10 +130,6 @@
     "frameworks": {
       "net471": {
         "dependencies": {
-          "DiscordRichPresence": {
-            "target": "Package",
-            "version": "[1.0.175, )"
-          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.1, )"
@@ -218,20 +148,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Ein Downgrade des Pakets \"Newtonsoft.Json\" von 12.0.2 auf 12.0.1 wurde festgestellt. Verweisen Sie direkt aus dem Projekt auf das Paket, um eine andere Version auszuwählen. \r\n Bullet_Game_PT1 -> DiscordRichPresence 1.0.175 -> Newtonsoft.Json (>= 12.0.2) \r\n Bullet_Game_PT1 -> Newtonsoft.Json (>= 12.0.1)",
-      "libraryId": "Newtonsoft.Json",
-      "targetGraphs": [
-        ".NETFramework,Version=v4.7.1",
-        ".NETFramework,Version=v4.7.1/win",
-        ".NETFramework,Version=v4.7.1/win-x64",
-        ".NETFramework,Version=v4.7.1/win-x86"
-      ]
-    }
-  ]
+  }
 }
