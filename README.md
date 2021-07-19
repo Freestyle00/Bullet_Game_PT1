@@ -10,6 +10,8 @@ There is a kanban board set to public on which you can see current progress: htt
 # How to compile
 First you need some downloads from this site: https://flatredball.com/download/ the first one would be the Visual Studio 2019 download (Select C# as you neeed the C# compiler)
 
+Note: I will soon do an release on the release page (In approximately one week)
+
 Second you need the .NET Framework 4.7.1 Developer Pack to be able to compile the game.
 
 Third download the project from github and double click on the .sln then you will be able to compile the game from Visual Studio.
