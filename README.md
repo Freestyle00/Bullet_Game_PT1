@@ -8,7 +8,7 @@ but your ability to use normaly when needed.
 There is a kanban board set to public on which you can see current progress: https://github.com/users/Freestyle00/projects/1.
 
 # How to compile
-First you need some downloads from this site: https://flatredball.com/download/ the first one would be the Visual Studio 2019 download (Select C# as you neeed the C# compiler)
+First you need some downloads from this site: https://flatredball.com/download/ the first one would be the Visual Studio 2019 download (Select C# as you need the C# compiler)
 
 Note: I will soon do an release on the release page (In approximately one week)
 
