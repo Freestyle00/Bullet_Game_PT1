@@ -11,7 +11,7 @@ namespace Bullet_Game_PT1
 		public static float Time;
 		public static float YouX;
 		public static float YouY;
-		public static int   EnemySpeed = 150; //I want that the value for the enemie speed is in here so its easier to play around with it
+		public static float   EnemySpeed = 150; //I want that the value for the enemie speed is in here so its easier to play around with it
 		public static string GameOverMessage;
 	}
 }

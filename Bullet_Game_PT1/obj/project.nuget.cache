@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "96qj9YH2mInPHBt13y14Txf3plRRXMHGwPU+pDjTkRk4QqOJC5cXCMVEnGrtQsL9wURi5wRBbVSjC2d+GLkkSg==",
+  "dgSpecHash": "SN5NgLJcFWYCT5XmUkyzBVcheuyW2EFH/yw9e1FkjYCgSvrFtepL+jH9GWr3DFIMrh0ZRYB3t2yS9gBEzjWW4A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nick\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj",
+  "projectFilePath": "C:\\Users\\Nick_\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Nick\\.nuget\\packages\\discordrichpresence\\1.0.175\\discordrichpresence.1.0.175.nupkg.sha512",
-    "C:\\Users\\Nick\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512"
+    "C:\\Users\\Nick_\\.nuget\\packages\\discordrichpresence\\1.0.175\\discordrichpresence.1.0.175.nupkg.sha512",
+    "C:\\Users\\Nick_\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512"
   ],
   "logs": [
     {

@@ -109,7 +109,7 @@ namespace Bullet_Game_PT1.Screens
 			/// </summary>
 			if (InputManager.Keyboard.KeyPushed(Keys.LeftShift))
 			{
-				FD44116Bit.Play(); //
+				FD44116Bit.Play(1, 0 , 0); //
 			}
 			if (InputManager.Keyboard.KeyDown(Keys.LeftShift)) //Checks if the LEftshift key is being held down and if yes it slows time down
 			{
@@ -140,7 +140,18 @@ namespace Bullet_Game_PT1.Screens
 				GameOverScreen("YOU LOST \n \n TIME LEFT: " + Math.Round(TimeL));
 			}
 		}
+		void Cheating()
+		{
+			/// <summary> No explanation needed </summary>
+			if (InputManager.Keyboard.KeyPushed(Keys.NumPad0))
+			{
+				const float ValueToSlowDown = 1.25f;
 
+				PassOnClass.EnemySpeed /= ValueToSlowDown;
+
+				YouInstance.CurrentHP += 1;
+			}
+		}
 	    private void GameOverScreen(string Message)
 		{
 			PassOnClass.GameOverMessage = Message;

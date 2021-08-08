@@ -82,6 +82,8 @@
     <Compile Include="Forms\Screens\GameScreenGumForms.Generated.cs">
       <DependentUpon>GameScreenGumForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Screens\SplashScreenGumForms.cs" />
+    <Compile Include="Forms\Screens\SplashScreenGumForms.Generated.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Game1.Generated.cs">
       <DependentUpon>Game1.cs</DependentUpon>
@@ -219,6 +221,8 @@
     <Compile Include="GumRuntimes\NineSliceRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\PolygonRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\RectangleRuntime.Generated.cs" />
+    <Compile Include="GumRuntimes\SplashScreenGumRuntime.cs" />
+    <Compile Include="GumRuntimes\SplashScreenGumRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\SpriteRuntime.Generated.cs" />
     <Compile Include="GumRuntimes\TextRuntime.Generated.cs" />
     <Compile Include="KeyboardAndControllerInput.cs" />
@@ -240,6 +244,10 @@
     </Compile>
     <Compile Include="Screens\GameScreen.Generated.Event.cs">
       <DependentUpon>GameScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SplashScreen.cs" />
+    <Compile Include="Screens\SplashScreen.Generated.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Setup\CameraSetup.cs" />
     <Compile Include="TileCollisions\CollidableListVsTileShapeCollectionRelationship.cs" />
@@ -466,6 +474,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>GameScreenGum</Name>
     </None>
+    <None Include="content\gumproject\screens\splashscreengum.gusx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Name>SplashScreenGum</Name>
+    </None>
     <None Include="content\gumproject\standards\circle.gutx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Name>circle</Name>
@@ -560,6 +572,7 @@
     <None Include="Libraries\DesktopGl\Release\FlatRedBall.Forms.dll" />
     <None Include="Libraries\DesktopGl\Release\GumCoreXnaPc.dll" />
     <None Include="Libraries\DesktopGl\Release\StateInterpolation.dll" />
+    <EmbeddedResource Include="Icon.bmp" />
     <Content Include="MonoGame.Framework.dll.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -39,6 +39,7 @@
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("HealthBar", typeof(Bullet_Game_PT1.GumRuntimes.HealthBarRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("GameOverGum", typeof(Bullet_Game_PT1.GumRuntimes.GameOverGumRuntime));
                 GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("GameScreenGum", typeof(Bullet_Game_PT1.GumRuntimes.GameScreenGumRuntime));
+                GumRuntime.ElementSaveExtensions.RegisterGueInstantiationType("SplashScreenGum", typeof(Bullet_Game_PT1.GumRuntimes.SplashScreenGumRuntime));
                 
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.Button)] = typeof(Bullet_Game_PT1.GumRuntimes.DefaultForms.ButtonRuntime);
                 FlatRedBall.Forms.Controls.FrameworkElement.DefaultFormsComponents[typeof(FlatRedBall.Forms.Controls.CheckBox)] = typeof(Bullet_Game_PT1.GumRuntimes.DefaultForms.CheckBoxRuntime);

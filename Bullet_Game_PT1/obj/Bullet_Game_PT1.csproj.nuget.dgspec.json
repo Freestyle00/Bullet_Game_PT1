@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Nick\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj": {}
+    "C:\\Users\\Nick_\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Nick\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj": {
+    "C:\\Users\\Nick_\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Nick\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj",
+        "projectUniqueName": "C:\\Users\\Nick_\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj",
         "projectName": "Bullet_Game_PT1",
-        "projectPath": "C:\\Users\\Nick\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj",
-        "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Nick\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\obj\\",
+        "projectPath": "C:\\Users\\Nick_\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\Bullet_Game_PT1.csproj",
+        "packagesPath": "C:\\Users\\Nick_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Nick_\\Documents\\FlatRedBallProjects\\Bullet_Game_PT1\\Bullet_Game_PT1\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Nick_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

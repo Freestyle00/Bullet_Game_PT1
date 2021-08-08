@@ -30,6 +30,7 @@ namespace Bullet_Game_PT1.Screens
             BulletSpawn();
             SlowMo();
             CheckIfPLayerDead();
+            Cheating();
             GUIActivity();
         }
         void CustomDestroy()
