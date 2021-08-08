@@ -278,3 +278,4 @@ C:\Users\Nick_\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\obj
 C:\Users\Nick_\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\obj\x86\Debug\Bullet_Game_PT1.exe
 C:\Users\Nick_\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\obj\x86\Debug\Bullet_Game_PT1.pdb
 C:\Users\Nick_\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\obj\x86\Debug\Bullet_Game_PT1.csproj.AssemblyReference.cache
+C:\Users\Nick_\Documents\FlatRedBallProjects\Bullet_Game_PT1\Bullet_Game_PT1\bin\DesktopGL\x86\Debug\content\gumproject\screens\splashscreengum.gusx

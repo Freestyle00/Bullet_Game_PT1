@@ -25,6 +25,7 @@
                     switch(mCurrentVariableState)
                     {
                         case  VariableState.Default:
+                            TextInstance.Parent = this.GetGraphicalUiElementByName("MessageText");
                             MessageText.Height = 599f;
                             MessageText.HorizontalAlignment = RenderingLibrary.Graphics.HorizontalAlignment.Center;
                             MessageText.Text = "Hello World";
@@ -33,6 +34,11 @@
                             MessageText.X = 0f;
                             MessageText.XOrigin = RenderingLibrary.Graphics.HorizontalAlignment.Left;
                             MessageText.Y = 0f;
+                            TextInstance.Height = 21f;
+                            TextInstance.Text = "Press \"R\" to restart";
+                            TextInstance.Width = 169f;
+                            TextInstance.X = 325f;
+                            TextInstance.Y = 525f;
                             break;
                     }
                 }
@@ -63,6 +69,22 @@
                 bool setMessageTextYSecondValue = false;
                 float MessageTextYFirstValue= 0;
                 float MessageTextYSecondValue= 0;
+                bool setTextInstanceHeightFirstValue = false;
+                bool setTextInstanceHeightSecondValue = false;
+                float TextInstanceHeightFirstValue= 0;
+                float TextInstanceHeightSecondValue= 0;
+                bool setTextInstanceWidthFirstValue = false;
+                bool setTextInstanceWidthSecondValue = false;
+                float TextInstanceWidthFirstValue= 0;
+                float TextInstanceWidthSecondValue= 0;
+                bool setTextInstanceXFirstValue = false;
+                bool setTextInstanceXSecondValue = false;
+                float TextInstanceXFirstValue= 0;
+                float TextInstanceXSecondValue= 0;
+                bool setTextInstanceYFirstValue = false;
+                bool setTextInstanceYSecondValue = false;
+                float TextInstanceYFirstValue= 0;
+                float TextInstanceYSecondValue= 0;
                 switch(firstState)
                 {
                     case  VariableState.Default:
@@ -90,6 +112,22 @@
                         }
                         setMessageTextYFirstValue = true;
                         MessageTextYFirstValue = 0f;
+                        setTextInstanceHeightFirstValue = true;
+                        TextInstanceHeightFirstValue = 21f;
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance.Parent = this.GetGraphicalUiElementByName("MessageText");
+                        }
+                        if (interpolationValue < 1)
+                        {
+                            this.TextInstance.Text = "Press \"R\" to restart";
+                        }
+                        setTextInstanceWidthFirstValue = true;
+                        TextInstanceWidthFirstValue = 169f;
+                        setTextInstanceXFirstValue = true;
+                        TextInstanceXFirstValue = 325f;
+                        setTextInstanceYFirstValue = true;
+                        TextInstanceYFirstValue = 525f;
                         break;
                 }
                 switch(secondState)
@@ -119,6 +157,22 @@
                         }
                         setMessageTextYSecondValue = true;
                         MessageTextYSecondValue = 0f;
+                        setTextInstanceHeightSecondValue = true;
+                        TextInstanceHeightSecondValue = 21f;
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance.Parent = this.GetGraphicalUiElementByName("MessageText");
+                        }
+                        if (interpolationValue >= 1)
+                        {
+                            this.TextInstance.Text = "Press \"R\" to restart";
+                        }
+                        setTextInstanceWidthSecondValue = true;
+                        TextInstanceWidthSecondValue = 169f;
+                        setTextInstanceXSecondValue = true;
+                        TextInstanceXSecondValue = 325f;
+                        setTextInstanceYSecondValue = true;
+                        TextInstanceYSecondValue = 525f;
                         break;
                 }
                 var wasSuppressed = mIsLayoutSuspended;
@@ -141,6 +195,22 @@
                 if (setMessageTextYFirstValue && setMessageTextYSecondValue)
                 {
                     MessageText.Y = MessageTextYFirstValue * (1 - interpolationValue) + MessageTextYSecondValue * interpolationValue;
+                }
+                if (setTextInstanceHeightFirstValue && setTextInstanceHeightSecondValue)
+                {
+                    TextInstance.Height = TextInstanceHeightFirstValue * (1 - interpolationValue) + TextInstanceHeightSecondValue * interpolationValue;
+                }
+                if (setTextInstanceWidthFirstValue && setTextInstanceWidthSecondValue)
+                {
+                    TextInstance.Width = TextInstanceWidthFirstValue * (1 - interpolationValue) + TextInstanceWidthSecondValue * interpolationValue;
+                }
+                if (setTextInstanceXFirstValue && setTextInstanceXSecondValue)
+                {
+                    TextInstance.X = TextInstanceXFirstValue * (1 - interpolationValue) + TextInstanceXSecondValue * interpolationValue;
+                }
+                if (setTextInstanceYFirstValue && setTextInstanceYSecondValue)
+                {
+                    TextInstance.Y = TextInstanceYFirstValue * (1 - interpolationValue) + TextInstanceYSecondValue * interpolationValue;
                 }
                 if (interpolationValue < 1)
                 {
@@ -293,6 +363,54 @@
                             Value = MessageText.Y
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Height",
+                            Type = "float",
+                            Value = TextInstance.Height
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Parent",
+                            Type = "string",
+                            Value = TextInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Text",
+                            Type = "string",
+                            Value = TextInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Width",
+                            Type = "float",
+                            Value = TextInstance.Width
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.X",
+                            Type = "float",
+                            Value = TextInstance.X
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Y",
+                            Type = "float",
+                            Value = TextInstance.Y
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -367,6 +485,54 @@
                             Value = MessageText.Y + 0f
                         }
                         );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Height",
+                            Type = "float",
+                            Value = TextInstance.Height + 21f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Parent",
+                            Type = "string",
+                            Value = TextInstance.Parent
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Text",
+                            Type = "string",
+                            Value = TextInstance.Text
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Width",
+                            Type = "float",
+                            Value = TextInstance.Width + 169f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.X",
+                            Type = "float",
+                            Value = TextInstance.X + 325f
+                        }
+                        );
+                        newState.Variables.Add(new Gum.DataTypes.Variables.VariableSave()
+                        {
+                            SetsValue = true,
+                            Name = "TextInstance.Y",
+                            Type = "float",
+                            Value = TextInstance.Y + 525f
+                        }
+                        );
                         break;
                 }
                 return newState;
@@ -387,6 +553,7 @@
             }
             private bool tryCreateFormsObject;
             public Bullet_Game_PT1.GumRuntimes.TextRuntime MessageText { get; set; }
+            public Bullet_Game_PT1.GumRuntimes.TextRuntime TextInstance { get; set; }
             public GameOverGumRuntime (bool fullInstantiation = true, bool tryCreateFormsObject = true) 
             {
                 this.tryCreateFormsObject = tryCreateFormsObject;
@@ -414,6 +581,7 @@
             private void AssignReferences () 
             {
                 MessageText = this.GetGraphicalUiElementByName("MessageText") as Bullet_Game_PT1.GumRuntimes.TextRuntime;
+                TextInstance = this.GetGraphicalUiElementByName("TextInstance") as Bullet_Game_PT1.GumRuntimes.TextRuntime;
                 if (tryCreateFormsObject)
                 {
                     FormsControlAsObject = new Bullet_Game_PT1.FormsControls.Screens.GameOverGumForms(this);

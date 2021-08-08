@@ -73,10 +73,7 @@ xbox native support only (to use a Dualshock 4 controller use DS4 windows)
 
 Left Analog Stick: The same as ArrowKeys
 
-A button: SlowMo
-
-
-Being in SlowMo will not not advance your time</Value>
+A button: SlowMo</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -100,7 +97,7 @@ Being in SlowMo will not not advance your time</Value>
     <Variable>
       <Type>string</Type>
       <Name>TextInstance2.Text</Name>
-      <Value xsi:type="xsd:string">Press any key to play the game</Value>
+      <Value xsi:type="xsd:string">Press "Enter" to play the game</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -112,13 +109,13 @@ Being in SlowMo will not not advance your time</Value>
     <Variable>
       <Type>float</Type>
       <Name>TextInstance2.X</Name>
-      <Value xsi:type="xsd:float">239</Value>
+      <Value xsi:type="xsd:float">252</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>TextInstance2.Y</Name>
-      <Value xsi:type="xsd:float">562</Value>
+      <Value xsi:type="xsd:float">499</Value>
       <SetsValue>true</SetsValue>
     </Variable>
   </State>

@@ -38,7 +38,7 @@
                 ResolutionHeight = 599,
                 Is2D = true,
                 IsFullScreen = false,
-                AllowWidowResizing = true,
+                AllowWidowResizing = false,
                 TextureFilter = Microsoft.Xna.Framework.Graphics.TextureFilter.Point,
                 ResizeBehavior = ResizeBehavior.IncreaseVisibleArea,
                 ScaleGum = 100f,

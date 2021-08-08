@@ -12,6 +12,7 @@ using FlatRedBall.Graphics.Particle;
 using FlatRedBall.Math.Geometry;
 using FlatRedBall.Localization;
 
+using Microsoft.Xna.Framework.Input;
 
 
 namespace Bullet_Game_PT1.Screens
@@ -28,7 +29,10 @@ namespace Bullet_Game_PT1.Screens
         void CustomActivity(bool firstTimeCalled)
         {
             GameOverGum.MessageText.Text = PassOnClass.GameOverMessage;
-
+			if (InputManager.Keyboard.KeyPushed(Keys.R))
+			{
+                MoveToScreen("SplashScreen");
+			}
         }
 
         void CustomDestroy()

@@ -1,5 +1,35 @@
 {
   "UserEvents": {
-    "Nick": []
+    "Nick": [],
+    "Nick_": [
+      {
+        "NewName": " GameOverGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-08-08T14:50:25.9933228Z"
+      },
+      {
+        "NewName": " SplashScreenGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-08-08T15:17:55.6977171Z"
+      },
+      {
+        "NewName": " SplashScreenGum.TextInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-08-08T15:17:57.2492304Z"
+      },
+      {
+        "NewName": " SplashScreenGum.TextInstance2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2021-08-08T15:17:58.9860364Z"
+      }
+    ]
   }
 }

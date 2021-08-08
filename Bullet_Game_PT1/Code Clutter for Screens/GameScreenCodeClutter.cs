@@ -20,8 +20,6 @@ using FlatRedBall.Localization;
 using Microsoft.Xna.Framework.Input;
 
 using Bullet_Game_PT1.Entities;
-using DiscordRPC;
-using DiscordRPC.Logging;
 
 namespace Bullet_Game_PT1.Screens
 {
@@ -107,15 +105,15 @@ namespace Bullet_Game_PT1.Screens
 			/// <summary>
 			/// This function wil be really straightforward (I HOPE) you hold down a button and time slows down thats it (PLEASE)
 			/// </summary>
-			if (InputManager.Keyboard.KeyPushed(Keys.LeftShift))
+			if (InputManager.Keyboard.KeyPushed(Keys.LeftShift) | InputManager.Xbox360GamePads[0].ButtonPushed(Xbox360GamePad.Button.A))
 			{
-				FD44116Bit.Play(1, 0 , 0); //
+				FD44116Bit.Play(1, 0 , 0);
 			}
-			if (InputManager.Keyboard.KeyDown(Keys.LeftShift)) //Checks if the LEftshift key is being held down and if yes it slows time down
+			if (InputManager.Keyboard.KeyDown(Keys.LeftShift) | InputManager.Xbox360GamePads[0].ButtonDown(Xbox360GamePad.Button.A))
 			{
 				TimeManager.TimeFactor = .1f;	//interestingly when time is slowed down the spawnrate increases i should keep that in mind
 			}
-			else //If it isnt then it should be defaultet back to 1
+			else 
 			{
 				TimeManager.TimeFactor = 1;
 			}
